@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>02 Disease Mapping | PandemicPrep Kelompok 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head><body><div id="progress"></div><header class="navbar">
+<a class="brand" href="../index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a>
+<button class="menu-toggle">☰</button>
+<nav class="nav-links">
+<a href="../index.html">Home</a><a href="overview.html">Overview</a><a class="active" href="mapping.html">Disease Map</a>
+<a href="prevention.html">Prevention</a><a href="telehealth.html">Telehealth</a>
+<a href="communication.html">Communication</a><a href="reflection.html">Reflection</a>
+</nav><button class="theme-toggle" id="themeToggle">☾</button></header>
+<main><section class="page-hero"><div class="container reveal"><span class="eyebrow">02 / DISEASE MAPPING</span><h1>Where does risk concentrate?</h1><p>Memvisualisasikan persebaran, hotspot, vulnerability, kelompok berisiko, dan indikator pemetaan COVID-19.</p></div></section>
+<section class="content-section"><div class="container">
+<div class="callout"><strong>Interactive Map:</strong> peta di bawah adalah media pembelajaran. Nilai risk meter bersifat <b>ilustratif, bukan skor resmi</b>. Untuk angka kasus aktual, gunakan WHO COVID-19 Dashboard dan sumber pemerintah.</div>
+<div class="map-wrap"><div id="map" class="map-box"></div><div class="map-info">
+    
+<span class="eyebrow">LOCATION PROFILE</span><h3 id="locationTitle">Global overview</h3><p id="locationText">Klik marker untuk melihat konteks epidemiologi dan preparedness.</p>
+<div class="risk-meter"><div id="riskFill" class="risk-fill"></div></div><small id="riskLabel">Risk context: —</small>
+<h3 style="margin-top:25px">Indonesia focus</h3>
+<div class="region-buttons">
+<button class="region-btn" data-region="Jawa Barat">Jawa Barat</button><button class="region-btn" data-region="DKI Jakarta">DKI Jakarta</button>
+<button class="region-btn" data-region="Jawa Timur">Jawa Timur</button><button class="region-btn" data-region="Bali">Bali</button>
+<button class="region-btn" data-region="Sulawesi Selatan">Sulawesi Selatan</button><button class="region-btn" data-region="Papua">Papua</button>
+</div></div></div>
+
+  <!-- =========================
+         GLOBAL DISTRIBUTION
+    ========================= -->
+    <section class="content-section soft-bg">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span class="section-label">
+
+                    <i class="fa-solid fa-earth-americas"></i>
+
+                    Persebaran Global
+
+                </span>
+
+                <h2>
+
+                    COVID-19 menyebar
+                    <span>lintas negara</span>
+
+                </h2>
+
+                <p>
+
+                    SARS-CoV-2 menyebar ke lebih dari 200 negara.
+                    Pada awal 2022, WHO mencatat jumlah kasus kumulatif
+                    yang tinggi di berbagai kawasan dunia.
+
+                </p>
+
+            </div>
+
+
+            <div class="region-grid">
+
+                <div class="region-card reveal">
+
+                    <div class="region-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Eropa
+                    </h3>
+
+                    <strong>
+                        &gt;126 juta
+                    </strong>
+
+                    <p>
+                        Kasus kumulatif pada awal 2022.
+                    </p>
+
+                </div>
+
+
+                <div class="region-card reveal">
+
+                    <div class="region-icon">
+                        🌎
+                    </div>
+
+                    <h3>
+                        Amerika
+                    </h3>
+
+                    <strong>
+                        &gt;124 juta
+                    </strong>
+
+                    <p>
+                        Kasus kumulatif pada awal 2022.
+                    </p>
+
+                </div>
+
+
+                <div class="region-card reveal">
+
+                    <div class="region-icon">
+                        🌏
+                    </div>
+
+                    <h3>
+                        Asia
+                    </h3>
+
+                    <strong>
+                        ~49 juta
+                    </strong>
+
+                    <p>
+                        Kasus kumulatif pada awal 2022.
+                    </p>
+
+                </div>
+
+
+                <div class="region-card reveal">
+
+                    <div class="region-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        Afrika
+                    </h3>
+
+                    <strong>
+                        ~7,9 juta
+                    </strong>
+
+                    <p>
+                        Kasus kumulatif pada awal 2022.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="note-box reveal">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <p>
+
+                    <strong>Catatan:</strong>
+                    Informasi persebaran global di atas merupakan
+                    gambaran berdasarkan data yang digunakan dalam
+                    materi tugas.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<h2>1. Persebaran COVID-19 di dunia & Indonesia</h2>
+<div class="stat-grid">
+<div class="stat-card"><b>200+</b><span>negara yang terdampak secara global</span></div>
+<div class="stat-card"><b>126M+</b><span>akumulasi kasus Eropa pada awal 2022 menurut data yang dirujuk</span></div>
+<div class="stat-card"><b>124M+</b><span>akumulasi kasus Amerika pada awal 2022 menurut data yang dirujuk</span></div>
+<div class="stat-card"><b>49M</b><span>sekitar akumulasi kasus Asia pada awal 2022</span></div>
+</div>
+<p>WHO mencatat hingga awal 2022 akumulasi kasus tertinggi berada di Eropa, disusul Amerika, Asia, dan Afrika. Indonesia mengumumkan kasus pertama secara resmi pada 2 Maret 2020. Persebaran nasional tidak merata dan banyak terkonsentrasi di wilayah padat penduduk seperti DKI Jakarta, Jawa Barat, Jawa Timur, Jawa Tengah, serta Sulawesi Selatan.</p>
+<p><b>Catatan:</b> sejak 27 Mei 2025, WHO secara resmi memindahkan klasifikasi regional Indonesia dari South-East Asia Region ke Western Pacific Region.</p>
+
+<h2>2. Wilayah terdampak & pola spasial</h2>
+<div class="three-col">
+<div class="info-card"><span class="icon">🟥</span><h3>Zonasi risiko</h3><p>Menggunakan indikator epidemiologi, surveilans, testing/positivity, dan kapasitas pelayanan untuk menggambarkan risiko penularan.</p></div>
+<div class="info-card"><span class="icon">🧩</span><h3>Vulnerability index</h3><p>Menggabungkan faktor epidemiologi dengan sosial-ekonomi, demografi, higiene, layanan kesehatan, dan mobilitas.</p></div>
+<div class="info-card"><span class="icon">🔗</span><h3>Spillover</h3><p>Moran’s I sebesar 0,8820 pada studi yang dirujuk menunjukkan autokorelasi spasial positif yang sangat kuat antarwilayah.</p></div>
+</div>
+<p>Wilayah dengan vulnerability tinggi didominasi kabupaten/kota di Jawa dan Sumatra bagian selatan. Dalam pemodelan yang dirujuk, Kabupaten Dogiyai memiliki skor indeks kerawanan 100,0 sedangkan Kota Tarakan 10,0. Sebanyak 61% daerah mengalami mismatch antara risiko epidemiologi dan vulnerability sosial-ekonomi; contoh wilayah low risk tetapi high vulnerability antara lain Cianjur, Bojonegoro, Sampang, Malang, Asmat, dan Jayawijaya.</p>
+
+<h2>3. Kelompok berisiko tinggi</h2>
+<div class="card-grid">
+<div class="info-card"><h3>🩺 Komorbid</h3><p>Penyakit paru, jantung, dan diabetes merupakan komorbid penting. Sumber Kemenkes yang dirujuk menempatkan komorbid sebagai penyebab utama kematian pasien COVID-19; studi daerah melaporkan proporsi sangat tinggi pada pasien meninggal.</p></div>
+<div class="info-card"><h3>👵 Lansia</h3><p>Risiko fatalitas meningkat, terutama jika disertai komorbid. Lansia menjadi prioritas skrining dan perlindungan.</p></div>
+<div class="info-card"><h3>🤰 Ibu hamil & balita</h3><p>Kerentanan dapat meningkat akibat gangguan akses gizi, pemantauan, dan pelayanan kesehatan selama pandemi.</p></div>
+<div class="info-card"><h3>🚌 Migran & komuter</h3><p>Mobilitas tinggi meningkatkan peluang paparan langsung maupun tidak langsung.</p></div>
+</div>
+
+<h2>4. Data dan indikator pemetaan</h2>
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Dimensi</th><th>Indikator yang dapat dipetakan</th></tr></thead><tbody>
+<tr><td>Risiko epidemiologi</td><td>Tren kasus aktif/meninggal, positivity rate, testing, kapasitas tempat tidur isolasi.</td></tr>
+<tr><td>Sosial ekonomi</td><td>Persentase penduduk miskin; penduduk usia 15+ tidak tamat SD.</td></tr>
+<tr><td>Demografi</td><td>Kepadatan penduduk; proporsi lansia 60+.</td></tr>
+<tr><td>Higiene & perumahan</td><td>Luas lantai &lt;7,5 m²/kapita; akses sanitasi layak; akses air minum aman.</td></tr>
+<tr><td>Layanan kesehatan</td><td>Penduduk tanpa jaminan kesehatan; rasio penduduk terhadap tempat tidur, dokter, dan perawat.</td></tr>
+<tr><td>Epidemiologi tambahan</td><td>Morbiditas; perokok aktif harian; CFR; fasilitas cuci tangan dasar.</td></tr>
+<tr><td>Mobilitas</td><td>Proporsi pekerja komuter; migrasi masuk antar daerah.</td></tr>
+</tbody></table></div>
+
+<div class="source-note"><b>Prinsip:</b> jumlah kasus saja tidak cukup. Disease mapping yang baik menggabungkan data epidemiologi, sosial-demografi, kapasitas layanan, dan mobilitas.</div>
+</div></section></main>
+<footer class="footer"><div class="container footer-grid">
+<div><a class="brand" href="../index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a><p>Interactive Digital Website — Global Disease & Communication Project.</p></div>
+<div><strong>Kelompok 2</strong><p>Pandemic Preparedness<br>COVID-19 & Emerging Diseases</p></div>
+<div><strong>Official sources</strong><p><a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> · <a href="https://www.kemkes.go.id/" target="_blank" rel="noopener">Kemenkes RI</a></p></div>
+</div><div class="container footer-bottom">© 2026 Kelompok 2 · Academic/educational purposes.</div></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="../script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+ const map=L.map("map").setView([3,116],3);
+ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap contributors"}).addTo(map);
+ const places=[
+ {name:"Europe",lat:51,lon:10,risk:60,text:"Akumulasi kasus historis tinggi; mobilitas internasional dan keterhubungan antarnegara membuat surveilans lintas batas penting."},
+ {name:"Americas",lat:20,lon:-75,risk:58,text:"Wilayah dengan beban kasus historis tinggi dan mobilitas luas; risk assessment perlu disesuaikan dengan kapasitas lokal."},
+ {name:"Asia",lat:30,lon:105,risk:68,text:"Populasi besar, kepadatan, dan mobilitas regional menjadi konteks penting untuk preparedness."},
+ {name:"Africa",lat:5,lon:20,risk:45,text:"Kapasitas layanan dan akses kesehatan merupakan komponen penting dalam menilai vulnerability."},
+ {name:"Indonesia",lat:-2.5,lon:118,risk:75,text:"Negara kepulauan dengan mobilitas antardaerah tinggi; surveilans, akses layanan, dan kesiapan daerah perlu diperkuat."}
+ ];
+ function selectPlace(p){document.querySelector("#locationTitle").textContent=p.name;document.querySelector("#locationText").textContent=p.text;document.querySelector("#riskFill").style.width=p.risk+"%";document.querySelector("#riskLabel").textContent="Illustrative preparedness context: "+p.risk+"/100";}
+ places.forEach(p=>L.marker([p.lat,p.lon]).addTo(map).bindPopup("<b>"+p.name+"</b>").on("click",()=>selectPlace(p)));
+ const regions={
+ "Jawa Barat":{lat:-6.9,lon:107.6,risk:78,text:"Kepadatan, urbanisasi, mobilitas, dan keterhubungan dengan kawasan metropolitan menjadi konteks risiko."},
+ "DKI Jakarta":{lat:-6.2,lon:106.8,risk:82,text:"Pusat mobilitas nasional/internasional; kesiapsiagaan membutuhkan surveilans dan respons cepat."},
+ "Jawa Timur":{lat:-7.5,lon:112.7,risk:72,text:"Mobilitas antarkota dan kepadatan pada beberapa kawasan perlu masuk risk assessment."},
+ "Bali":{lat:-8.4,lon:115.2,risk:74,text:"Mobilitas wisata internasional membuat border health dan komunikasi risiko relevan."},
+ "Sulawesi Selatan":{lat:-5.1,lon:119.4,risk:65,text:"Konektivitas regional dan kapasitas layanan perlu diperhitungkan."},
+ "Papua":{lat:-4,lon:138,risk:58,text:"Geografi, akses, dan kapasitas layanan merupakan komponen penting vulnerability."}
+ };
+ document.querySelectorAll(".region-btn").forEach(btn=>btn.addEventListener("click",()=>{const p={name:btn.dataset.region,...regions[btn.dataset.region]};selectPlace(p);map.setView([p.lat,p.lon],6);}));
+});
+</script></body></html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive Digital Website Kelompok 2 - Pandemic Preparedness: COVID-19 & Emerging Diseases">
+  <title>Pandemic Preparedness | Kelompok 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="progress"></div>
+
+  <header class="navbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">✚</span>
+      <span>Pandemic<span>Prep</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Buka menu">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="pages/overview.html">Overview</a>
+      <a href="pages/mapping.html">Disease Map</a>
+      <a href="pages/prevention.html">Prevention</a>
+      <a href="pages/telehealth.html">Telehealth</a>
+      <a href="pages/communication.html">Communication</a>
+      <a href="pages/reflection.html">Reflection</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">☾</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">GLOBAL DISEASE & COMMUNICATION PROJECT • KELOMPOK 2</span>
+          <h1>Prepare Today.<br><span>Protect Tomorrow.</span></h1>
+          <p class="hero-text">
+            Eksplorasi interaktif tentang kesiapsiagaan pandemi, COVID-19,
+            emerging diseases, inovasi telehealth, dan peran perawat dalam
+            melindungi masyarakat.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="pages/overview.html">Mulai Eksplorasi →</a>
+            <a class="btn btn-ghost" href="#quick-nav">Lihat 6 Halaman</a>
+          </div>
+          <div class="hero-meta">
+            <span>🧬 Emerging Diseases</span>
+            <span>🗺️ Disease Mapping</span>
+            <span>📱 Telehealth</span>
+          </div>
+        </div>
+
+        <div class="hero-card reveal delay-1">
+          <div class="pulse-ring"></div>
+          <div class="globe">🌐</div>
+          <div class="hero-card-content">
+            <span class="status-dot"></span>
+            <span>GLOBAL HEALTH READINESS</span>
+            <h3>One world.<br>Shared responsibility.</h3>
+            <p>Detect early • Respond fast • Recover stronger</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quick-nav">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">EXPLORE</span>
+          <h2>Enam halaman, satu tujuan.</h2>
+          <p>Pelajari bagaimana dunia dan Indonesia dapat mempersiapkan diri menghadapi pandemi berikutnya.</p>
+        </div>
+
+        <div class="feature-grid">
+          <a class="feature-card reveal" href="pages/overview.html">
+            <span class="feature-number">01</span><span class="feature-icon">🌍</span>
+            <h3>Global Overview</h3><p>COVID-19, emerging diseases, epidemiologi, faktor risiko, dan dampak kesehatan.</p><span class="card-link">Explore →</span>
+          </a>
+          <a class="feature-card reveal delay-1" href="pages/mapping.html">
+            <span class="feature-number">02</span><span class="feature-icon">🗺️</span>
+            <h3>Disease Mapping</h3><p>Peta interaktif global dan Indonesia serta pemetaan faktor risiko.</p><span class="card-link">Explore →</span>
+          </a>
+          <a class="feature-card reveal delay-2" href="pages/prevention.html">
+            <span class="feature-number">03</span><span class="feature-icon">🛡️</span>
+            <h3>Prevention Strategy</h3><p>Deteksi, pencegahan, pengendalian, respons, dan pemulihan pandemi.</p><span class="card-link">Explore →</span>
+          </a>
+          <a class="feature-card reveal" href="pages/telehealth.html">
+            <span class="feature-number">04</span><span class="feature-icon">📱</span>
+            <h3>PandemicCare</h3><p>Prototype telehealth dengan self-screening, monitoring, reminder, dan chatbot.</p><span class="card-link">Try Prototype →</span>
+          </a>
+          <a class="feature-card reveal delay-1" href="pages/communication.html">
+            <span class="feature-number">05</span><span class="feature-icon">🌐</span>
+            <h3>International Communication</h3><p>Simulasi komunikasi lintas bahasa dan budaya dalam situasi wabah.</p><span class="card-link">Simulate →</span>
+          </a>
+          <a class="feature-card reveal delay-2" href="pages/reflection.html">
+            <span class="feature-number">06</span><span class="feature-icon">💭</span>
+            <h3>Reflection</h3><p>Pembelajaran COVID-19, penerapan di Indonesia, dan peran strategis perawat.</p><span class="card-link">Reflect →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">THE BIG PICTURE</span>
+          <h2>Pandemi bukan hanya tentang virus.</h2>
+          <p>
+            Kesiapsiagaan pandemi merupakan kombinasi antara <strong>surveilans,
+            sistem kesehatan, komunikasi risiko, perilaku masyarakat, teknologi,
+            dan kolaborasi internasional.</strong>
+          </p>
+          <div class="quote-box">
+            <span>“</span>
+            <p>Preparedness turns uncertainty into coordinated action.</p>
+          </div>
+        </div>
+        <div class="readiness-diagram reveal delay-1">
+          <div class="diagram-node">🔎<b>DETECT</b><small>Surveilans & early warning</small></div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-node">🛡️<b>PREVENT</b><small>PPI & health promotion</small></div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-node">⚡<b>RESPOND</b><small>Rapid coordinated response</small></div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-node">🌱<b>RECOVER</b><small>Rebuild & learn</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand" href="index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a><p>Interactive Digital Website — Global Disease & Communication Project.</p></div>
+      <div><strong>Kelompok 2</strong><p>Pandemic Preparedness<br>COVID-19 & Emerging Diseases</p></div>
+      <div><strong>Sources</strong><p><a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> · <a href="https://www.kemkes.go.id/" target="_blank" rel="noopener">Kemenkes RI</a> · <a href="https://www.cdc.gov/" target="_blank" rel="noopener">CDC</a></p></div>
+    </div>
+    <div class="container footer-bottom">© 2026 Kelompok 2 · For academic/educational purposes.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

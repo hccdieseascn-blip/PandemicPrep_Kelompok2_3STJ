@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>04 Telehealth Innovation | PandemicPrep Kelompok 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css"></head><body><div id="progress"></div><header class="navbar">
+<a class="brand" href="../index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a>
+<button class="menu-toggle">☰</button>
+<nav class="nav-links">
+<a href="../index.html">Home</a><a href="overview.html">Overview</a><a href="mapping.html">Disease Map</a>
+<a href="prevention.html">Prevention</a><a class="active" href="telehealth.html">Telehealth</a>
+<a href="communication.html">Communication</a><a href="reflection.html">Reflection</a>
+</nav><button class="theme-toggle" id="themeToggle">☾</button></header>
+<main><section class="page-hero"><div class="container reveal"><span class="eyebrow">04 / TELEHEALTH INNOVATION</span><h1>PandemicCare — Healthcare Beyond Distance</h1><p>Inovasi telehealth, remote monitoring, reminder, digital literacy, chatbot, dan prototype low-cost IoT.</p></div></section>
+<section class="content-section"><div class="container">
+<div class="callout"><strong>Telehealth innovation:</strong> teknologi digital dapat menjaga kontinuitas pelayanan dan mengurangi penumpukan pasien, tetapi <b>tidak menggantikan pemeriksaan langsung</b> ketika kondisi memerlukan evaluasi klinis.</div>
+<div class="card-grid">
+<div class="info-card"><span class="icon">🩺</span><h3>1. Teleconsultation & Remote Triage</h3><p>Konsultasi video/telepon/aplikasi untuk pengkajian awal, saran, tindak lanjut, dan keputusan rujukan. Kategori simulasi: RS untuk gejala berat/kritis; fasilitas khusus untuk kasus sedang; isoman untuk kasus ringan/tanpa gejala.</p></div>
+<div class="info-card"><span class="icon">📈</span><h3>2. Remote Patient Monitoring</h3><p>Pemantauan suhu, tekanan darah, SpO₂, frekuensi napas, gejala, dan kepatuhan terapi. Dapat membantu mendeteksi penurunan kondisi lebih awal.</p></div>
+<div class="info-card"><span class="icon">🔔</span><h3>3. Digital Reminder</h3><p>Pengingat obat, pengisian log kesehatan, konsultasi ulang, atau jadwal pemeriksaan melalui SMS, aplikasi, atau chatbot.</p></div>
+<div class="info-card"><span class="icon">📚</span><h3>4. Digital Health Literacy</h3><p>Modul, video, infografis, dan portal terverifikasi tentang isolasi aman, penggunaan termometer/oximeter, nutrisi, stres, dan latihan pernapasan ringan.</p></div>
+<div class="info-card"><span class="icon">🤖</span><h3>5. AI-Powered Triage Chatbot</h3><p>Menjawab FAQ, self-assessment, edukasi, pengingat, dan mengarahkan pengguna bila perlu pemeriksaan. Prototype ini bukan alat diagnosis.</p></div>
+<div class="info-card"><span class="icon">📡</span><h3>6. Low-cost IoT</h3><p>Pulse oximeter Bluetooth/ESP32/Arduino dapat menjadi contoh integrasi data menuju dashboard monitoring dalam rapid prototyping.</p></div>
+</div>
+
+<h2>Prototype PandemicCare</h2>
+<div class="app-shell"><div class="app-window"><div class="app-top"><span class="app-logo">✚ PandemicCare</span><span>● Prototype</span></div><div class="app-body"><div class="screen-grid">
+<div class="screen-card"><h2 style="font-size:1.5rem">Self-Screening</h2><p class="muted">Jawab berdasarkan kondisi saat ini.</p>
+<div class="question"><p>1. Demam?</p><div class="option-row"><label class="option"><input type="radio" name="fever" value="yes"> Ya</label><label class="option"><input type="radio" name="fever" value="no" checked> Tidak</label></div></div>
+<div class="question"><p>2. Batuk/keluhan pernapasan?</p><div class="option-row"><label class="option"><input type="radio" name="cough" value="yes"> Ya</label><label class="option"><input type="radio" name="cough" value="no" checked> Tidak</label></div></div>
+<div class="question"><p>3. Sesak napas?</p><div class="option-row"><label class="option"><input type="radio" name="breath" value="yes"> Ya</label><label class="option"><input type="radio" name="breath" value="no" checked> Tidak</label></div></div>
+<div class="question"><p>4. Riwayat kontak dengan kasus infeksi?</p><div class="option-row"><label class="option"><input type="radio" name="contact" value="yes"> Ya</label><label class="option"><input type="radio" name="contact" value="no" checked> Tidak</label></div></div>
+<button class="btn btn-primary" id="screenBtn">START SCREENING</button><div id="screenResult" class="result"></div></div>
+<div><div class="screen-card"><h3>📊 Remote Monitoring</h3><div class="dashboard"><div class="metric"><b>37.2°C</b><small>Suhu</small></div><div class="metric"><b>98%</b><small>SpO₂ demo</small></div><div class="metric"><b>18/min</b><small>RR demo</small></div></div></div>
+<div class="screen-card" style="margin-top:15px"><h3>🔔 Reminder</h3><div class="checklist"><label class="check-item"><input type="checkbox"> Cek suhu</label><label class="check-item"><input type="checkbox"> Catat gejala</label><label class="check-item"><input type="checkbox"> Ikuti jadwal konsultasi</label></div></div>
+<div class="screen-card" style="margin-top:15px"><h3>🩺 Alur</h3><p>Self-assessment → Risk assessment → Teleconsultation → Advice → Referral if needed</p></div></div>
+</div></div></div></div>
+
+<h2>🤖 Chatbot Edukasi</h2><p class="muted">Coba tanyakan: “Apa manfaat telehealth?”, “Bagaimana pencegahan COVID-19?”, atau “Apa tanda bahaya?”</p>
+<div class="screen-card chat"><div id="chatMessages" class="chat-messages"><div class="bubble bot">Halo! Saya PandemicCare Bot. Saya membantu edukasi dasar tentang COVID-19, pencegahan, dan telehealth.</div></div><form id="chatForm" class="chat-input"><input id="chatInput" placeholder="Ketik pertanyaan..." autocomplete="off"><button class="btn btn-primary" type="submit">Kirim</button></form></div>
+</div></section></main>
+<footer class="footer"><div class="container footer-grid">
+<div><a class="brand" href="../index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a><p>Interactive Digital Website — Global Disease & Communication Project.</p></div>
+<div><strong>Kelompok 2</strong><p>Pandemic Preparedness<br>COVID-19 & Emerging Diseases</p></div>
+<div><strong>Official sources</strong><p><a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> · <a href="https://www.kemkes.go.id/" target="_blank" rel="noopener">Kemenkes RI</a></p></div>
+</div><div class="container footer-bottom">© 2026 Kelompok 2 · Academic/educational purposes.</div></footer>
+<script src="../script.js"></script></body></html>
