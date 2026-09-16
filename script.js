@@ -536,7 +536,7 @@ if (visual) {
         const response =
           matchedAnswer
             ? matchedAnswer.text
-            : "Saya adalah chatbot edukasi prototype. Coba tanyakan tentang COVID-19, vaksinasi, masker, kebersihan tangan, sesak napas, atau telehealth.";
+            : "Saya adalah chatbot edukasi prototype. Coba tanyakan tentang COVID-19, vaksinasi, masker, kebersihan tangan, sesak napas, atau telehealth. Maaf yyeah penggunaannya terbatas soalnya harus aku update dulu ehe, makasih ya";
 
 
         setTimeout(() => {
