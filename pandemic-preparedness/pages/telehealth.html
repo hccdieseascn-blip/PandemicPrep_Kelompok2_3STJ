@@ -1,47 +1,1576 @@
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>04 Telehealth Innovation | PandemicPrep Kelompok 2</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css"></head><body><div id="progress"></div><header class="navbar">
-<a class="brand" href="../index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a>
-<button class="menu-toggle">☰</button>
-<nav class="nav-links">
-<a href="../index.html">Home</a><a href="overview.html">Overview</a><a href="mapping.html">Disease Map</a>
-<a href="prevention.html">Prevention</a><a class="active" href="telehealth.html">Telehealth</a>
-<a href="communication.html">Communication</a><a href="reflection.html">Reflection</a>
-</nav><button class="theme-toggle" id="themeToggle">☾</button></header>
-<main><section class="page-hero"><div class="container reveal"><span class="eyebrow">04 / TELEHEALTH INNOVATION</span><h1>PandemicCare — Healthcare Beyond Distance</h1><p>Inovasi telehealth, remote monitoring, reminder, digital literacy, chatbot, dan prototype low-cost IoT.</p></div></section>
-<section class="content-section"><div class="container">
-<div class="callout"><strong>Telehealth innovation:</strong> teknologi digital dapat menjaga kontinuitas pelayanan dan mengurangi penumpukan pasien, tetapi <b>tidak menggantikan pemeriksaan langsung</b> ketika kondisi memerlukan evaluasi klinis.</div>
-<div class="card-grid">
-<div class="info-card"><span class="icon">🩺</span><h3>1. Teleconsultation & Remote Triage</h3><p>Konsultasi video/telepon/aplikasi untuk pengkajian awal, saran, tindak lanjut, dan keputusan rujukan. Kategori simulasi: RS untuk gejala berat/kritis; fasilitas khusus untuk kasus sedang; isoman untuk kasus ringan/tanpa gejala.</p></div>
-<div class="info-card"><span class="icon">📈</span><h3>2. Remote Patient Monitoring</h3><p>Pemantauan suhu, tekanan darah, SpO₂, frekuensi napas, gejala, dan kepatuhan terapi. Dapat membantu mendeteksi penurunan kondisi lebih awal.</p></div>
-<div class="info-card"><span class="icon">🔔</span><h3>3. Digital Reminder</h3><p>Pengingat obat, pengisian log kesehatan, konsultasi ulang, atau jadwal pemeriksaan melalui SMS, aplikasi, atau chatbot.</p></div>
-<div class="info-card"><span class="icon">📚</span><h3>4. Digital Health Literacy</h3><p>Modul, video, infografis, dan portal terverifikasi tentang isolasi aman, penggunaan termometer/oximeter, nutrisi, stres, dan latihan pernapasan ringan.</p></div>
-<div class="info-card"><span class="icon">🤖</span><h3>5. AI-Powered Triage Chatbot</h3><p>Menjawab FAQ, self-assessment, edukasi, pengingat, dan mengarahkan pengguna bila perlu pemeriksaan. Prototype ini bukan alat diagnosis.</p></div>
-<div class="info-card"><span class="icon">📡</span><h3>6. Low-cost IoT</h3><p>Pulse oximeter Bluetooth/ESP32/Arduino dapat menjadi contoh integrasi data menuju dashboard monitoring dalam rapid prototyping.</p></div>
-</div>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<h2>Prototype PandemicCare</h2>
-<div class="app-shell"><div class="app-window"><div class="app-top"><span class="app-logo">✚ PandemicCare</span><span>● Prototype</span></div><div class="app-body"><div class="screen-grid">
-<div class="screen-card"><h2 style="font-size:1.5rem">Self-Screening</h2><p class="muted">Jawab berdasarkan kondisi saat ini.</p>
-<div class="question"><p>1. Demam?</p><div class="option-row"><label class="option"><input type="radio" name="fever" value="yes"> Ya</label><label class="option"><input type="radio" name="fever" value="no" checked> Tidak</label></div></div>
-<div class="question"><p>2. Batuk/keluhan pernapasan?</p><div class="option-row"><label class="option"><input type="radio" name="cough" value="yes"> Ya</label><label class="option"><input type="radio" name="cough" value="no" checked> Tidak</label></div></div>
-<div class="question"><p>3. Sesak napas?</p><div class="option-row"><label class="option"><input type="radio" name="breath" value="yes"> Ya</label><label class="option"><input type="radio" name="breath" value="no" checked> Tidak</label></div></div>
-<div class="question"><p>4. Riwayat kontak dengan kasus infeksi?</p><div class="option-row"><label class="option"><input type="radio" name="contact" value="yes"> Ya</label><label class="option"><input type="radio" name="contact" value="no" checked> Tidak</label></div></div>
-<button class="btn btn-primary" id="screenBtn">START SCREENING</button><div id="screenResult" class="result"></div></div>
-<div><div class="screen-card"><h3>📊 Remote Monitoring</h3><div class="dashboard"><div class="metric"><b>37.2°C</b><small>Suhu</small></div><div class="metric"><b>98%</b><small>SpO₂ demo</small></div><div class="metric"><b>18/min</b><small>RR demo</small></div></div></div>
-<div class="screen-card" style="margin-top:15px"><h3>🔔 Reminder</h3><div class="checklist"><label class="check-item"><input type="checkbox"> Cek suhu</label><label class="check-item"><input type="checkbox"> Catat gejala</label><label class="check-item"><input type="checkbox"> Ikuti jadwal konsultasi</label></div></div>
-<div class="screen-card" style="margin-top:15px"><h3>🩺 Alur</h3><p>Self-assessment → Risk assessment → Teleconsultation → Advice → Referral if needed</p></div></div>
-</div></div></div></div>
+    <title>03 Telehealth Innovation | PandemicPrep Kelompok 2</title>
 
-<h2>🤖 Chatbot Edukasi</h2><p class="muted">Coba tanyakan: “Apa manfaat telehealth?”, “Bagaimana pencegahan COVID-19?”, atau “Apa tanda bahaya?”</p>
-<div class="screen-card chat"><div id="chatMessages" class="chat-messages"><div class="bubble bot">Halo! Saya PandemicCare Bot. Saya membantu edukasi dasar tentang COVID-19, pencegahan, dan telehealth.</div></div><form id="chatForm" class="chat-input"><input id="chatInput" placeholder="Ketik pertanyaan..." autocomplete="off"><button class="btn btn-primary" type="submit">Kirim</button></form></div>
-</div></section></main>
-<footer class="footer"><div class="container footer-grid">
-<div><a class="brand" href="../index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a><p>Interactive Digital Website — Global Disease & Communication Project.</p></div>
-<div><strong>Kelompok 2</strong><p>Pandemic Preparedness<br>COVID-19 & Emerging Diseases</p></div>
-<div><strong>Official sources</strong><p><a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> · <a href="https://www.kemkes.go.id/" target="_blank" rel="noopener">Kemenkes RI</a></p></div>
-</div><div class="container footer-bottom">© 2026 Kelompok 2 · Academic/educational purposes.</div></footer>
-<script src="../script.js"></script></body></html>
+    <!-- HEAD PUNYA KAMU TETAP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="telehealth.css">
+</head>
+
+<body class="telehealth-page">
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+
+    <a class="brand" href="../index.html">
+        <span class="brand-mark">✚</span>
+        <span>Pandemic<span>Prep</span></span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Buka menu">
+        ☰
+    </button>
+
+    <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="overview.html">Overview</a>
+        <a href="mapping.html">Disease Map</a>
+        <a href="prevention.html">Prevention</a>
+        <a href="telehealth.html" class="active">Telehealth</a>
+        <a href="communication.html">Communication</a>
+        <a href="reflection.html">Reflection</a>
+    </nav>
+
+    <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle day and night mode"
+    >
+        ☾
+    </button>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+<main>
+
+    <!-- HERO -->
+    <section class="telehealth-hero">
+
+        <div class="telehealth-hero-content">
+
+            <span class="eyebrow">
+                03 / TELEHEALTH INNOVATION
+            </span>
+
+            <h1>
+                Healthcare,
+                <span>Beyond Distance.</span>
+            </h1>
+
+            <p>
+                Inovasi telehealth dan telemedicine mendukung kontinuitas
+                pelayanan kesehatan, pemantauan pasien, komunikasi,
+                serta respons cepat selama kedaruratan kesehatan.
+            </p>
+
+            <div class="hero-tags">
+                <span>Teleconsultation</span>
+                <span>Remote Monitoring</span>
+                <span>AI Chatbot</span>
+            </div>
+
+        </div>
+
+
+        <!-- VISUAL -->
+        <div class="telehealth-visual">
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="phone-card">
+
+                <div class="phone-top">
+                    <span>09:41</span>
+                    <span>● ● ●</span>
+                </div>
+
+                <div class="health-icon">
+                    ♥
+                </div>
+
+                <h3>Health Monitor</h3>
+
+                <div class="monitor-value">
+                    <strong>97</strong>
+                    <span>% SpO₂</span>
+                </div>
+
+                <div class="monitor-row">
+
+                    <div>
+                        <small>Temperature</small>
+                        <strong>36.7°C</strong>
+                    </div>
+
+                    <div>
+                        <small>Respiratory</small>
+                        <strong>18/min</strong>
+                    </div>
+
+                </div>
+
+                <div class="monitor-status">
+                    <span></span>
+                    Stable condition
+                </div>
+
+            </div>
+
+            <div class="floating-data data-one">
+                <span>●</span>
+                Remote Patient Monitoring
+            </div>
+
+            <div class="floating-data data-two">
+                <span>✦</span>
+                Digital Health
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="telehealth-intro">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    WHY TELEHEALTH?
+                </span>
+
+                <h2>
+                    Technology as a bridge
+                    <span>to healthcare.</span>
+                </h2>
+
+                <p>
+                    Selama pandemi, teknologi digital membantu masyarakat
+                    memperoleh pelayanan kesehatan tanpa selalu harus
+                    datang langsung ke fasilitas kesehatan. Telehealth
+                    mendukung konsultasi, pemantauan, edukasi, pengingat,
+                    dan komunikasi kesehatan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 6 INOVASI -->
+    <section class="innovation-section">
+
+        <div class="container">
+
+            <div class="section-heading center">
+
+                <span class="eyebrow">
+                    06 KEY INNOVATIONS
+                </span>
+
+                <h2>
+                    How can telehealth
+                    <span>help?</span>
+                </h2>
+
+                <p>
+                    Enam penerapan telehealth yang dapat mendukung
+                    pandemic preparedness dan pelayanan kesehatan.
+                </p>
+
+            </div>
+
+
+            <div class="innovation-grid">
+
+
+                <!-- 01 -->
+                <article class="innovation-card">
+
+                    <div class="innovation-number">
+                        01
+                    </div>
+
+                    <div class="innovation-icon">
+                        ☎
+                    </div>
+
+                    <h3>
+                        Teleconsultation &
+                        Remote Triage
+                    </h3>
+
+                    <p>
+                        Konsultasi jarak jauh melalui video call,
+                        telepon, aplikasi kesehatan, atau platform digital
+                        untuk melakukan pengkajian awal dan menentukan
+                        kebutuhan pelayanan lebih lanjut.
+                    </p>
+
+                    <div class="innovation-list">
+
+                        <span>✓ Pengkajian awal</span>
+                        <span>✓ Penentuan kebutuhan rujukan</span>
+                        <span>✓ E-prescription</span>
+
+                    </div>
+
+                    <div class="innovation-benefit">
+                        <strong>Manfaat</strong>
+                        <span>
+                            Mengurangi penumpukan pasien dan risiko
+                            infeksi silang di fasilitas kesehatan.
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <!-- 02 -->
+                <article class="innovation-card featured">
+
+                    <div class="innovation-number">
+                        02
+                    </div>
+
+                    <div class="innovation-icon">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Remote Patient
+                        Monitoring
+                    </h3>
+
+                    <p>
+                        Pemantauan kondisi pasien dari jarak jauh melalui
+                        data kesehatan yang dikirim secara berkala
+                        menggunakan perangkat atau platform digital.
+                    </p>
+
+                    <div class="innovation-list">
+
+                        <span>✓ SpO₂</span>
+                        <span>✓ Suhu tubuh</span>
+                        <span>✓ Frekuensi napas</span>
+                        <span>✓ Tekanan darah</span>
+
+                    </div>
+
+                    <div class="innovation-benefit">
+                        <strong>Manfaat</strong>
+                        <span>
+                            Membantu mendeteksi perubahan kondisi pasien
+                            lebih dini.
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <!-- 03 -->
+                <article class="innovation-card">
+
+                    <div class="innovation-number">
+                        03
+                    </div>
+
+                    <div class="innovation-icon">
+                        ⏱
+                    </div>
+
+                    <h3>
+                        Digital Reminder &
+                        Follow-up
+                    </h3>
+
+                    <p>
+                        Sistem notifikasi digital membantu pasien mengingat
+                        jadwal obat, pengisian kondisi kesehatan, konsultasi
+                        ulang, atau pemeriksaan berikutnya.
+                    </p>
+
+                    <div class="innovation-list">
+
+                        <span>✓ Medication reminder</span>
+                        <span>✓ Daily health log</span>
+                        <span>✓ Follow-up notification</span>
+
+                    </div>
+
+                    <div class="innovation-benefit">
+                        <strong>Manfaat</strong>
+                        <span>
+                            Mendukung kepatuhan pasien terhadap terapi
+                            dan pemantauan kesehatan.
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <!-- 04 -->
+                <article class="innovation-card">
+
+                    <div class="innovation-number">
+                        04
+                    </div>
+
+                    <div class="innovation-icon">
+                        ◉
+                    </div>
+
+                    <h3>
+                        Digital Health Literacy
+                        & Communication
+                    </h3>
+
+                    <p>
+                        Penyampaian edukasi kesehatan melalui modul digital,
+                        infografis, video, website, dan portal informasi
+                        yang terverifikasi.
+                    </p>
+
+                    <div class="innovation-list">
+
+                        <span>✓ Edukasi isolasi</span>
+                        <span>✓ Penggunaan alat kesehatan</span>
+                        <span>✓ Nutrisi & kesehatan mental</span>
+
+                    </div>
+
+                    <div class="innovation-benefit">
+                        <strong>Manfaat</strong>
+                        <span>
+                            Meningkatkan kemandirian pasien dan membantu
+                            mengurangi penyebaran informasi yang salah.
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <!-- 05 -->
+                <article class="innovation-card">
+
+                    <div class="innovation-number">
+                        05
+                    </div>
+
+                    <div class="innovation-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        AI-Powered
+                        Triage Chatbot
+                    </h3>
+
+                    <p>
+                        Chatbot berbasis AI dapat memberikan informasi,
+                        melakukan skrining awal, menjawab pertanyaan umum,
+                        dan mengarahkan pengguna ke pelayanan kesehatan.
+                    </p>
+
+                    <div class="innovation-list">
+
+                        <span>✓ Self-assessment</span>
+                        <span>✓ FAQ automation</span>
+                        <span>✓ 24/7 information access</span>
+
+                    </div>
+
+                    <div class="innovation-benefit">
+                        <strong>Manfaat</strong>
+                        <span>
+                            Mengurangi beban pertanyaan berulang pada
+                            call center dan tenaga kesehatan.
+                        </span>
+                    </div>
+
+                </article>
+
+
+                <!-- 06 -->
+                <article class="innovation-card">
+
+                    <div class="innovation-number">
+                        06
+                    </div>
+
+                    <div class="innovation-icon">
+                        ⚙
+                    </div>
+
+                    <h3>
+                        Rapid Prototype &
+                        Low-Cost IoT
+                    </h3>
+
+                    <p>
+                        Pengembangan aplikasi sederhana dan perangkat
+                        IoT berbiaya rendah untuk membantu pengumpulan
+                        dan pemantauan data kesehatan.
+                    </p>
+
+                    <div class="innovation-list">
+
+                        <span>✓ Web/mobile dashboard</span>
+                        <span>✓ Pulse oximeter</span>
+                        <span>✓ Bluetooth / ESP32</span>
+
+                    </div>
+
+                    <div class="innovation-benefit">
+                        <strong>Manfaat</strong>
+                        <span>
+                            Mendukung implementasi teknologi kesehatan
+                            di daerah dengan keterbatasan fasilitas.
+                        </span>
+                    </div>
+
+                </article>
+            </div>
+
+        
+        </div>
+</section>
+    <!-- =========================================
+     7. PROTOTYPE PANDEMICCARE
+========================================= -->
+
+<section class="content-section prototype-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">07 / TELEHEALTH PROTOTYPE</span>
+            <h2>Prototype <span>PandemicCare</span></h2>
+            <p>
+                Prototype sederhana yang menggambarkan penerapan telehealth
+                dalam skrining awal, pemantauan pasien jarak jauh,
+                pengingat kesehatan, dan alur rujukan.
+            </p>
+        </div>
+
+        <div class="app-shell">
+
+            <div class="app-window">
+
+                <!-- APP HEADER -->
+                <div class="app-top">
+                    <span class="app-logo">
+                        ✚ PandemicCare
+                    </span>
+
+                    <span class="app-status">
+                        ● Prototype
+                    </span>
+                </div>
+
+
+                <!-- APP BODY -->
+                <div class="app-body">
+
+                    <div class="screen-grid">
+
+                        <!-- =========================
+                             SELF SCREENING
+                        ========================== -->
+
+                        <div class="screen-card screening-card">
+
+                            <div class="screen-icon">🩺</div>
+
+                            <h3>Self-Screening</h3>
+
+                            <p class="muted">
+                                Jawab berdasarkan kondisi kesehatan saat ini.
+                                Hasil skrining hanya merupakan penilaian awal
+                                dan bukan diagnosis medis.
+                            </p>
+
+
+                            <div class="question">
+
+                                <p>1. Apakah Anda mengalami demam?</p>
+
+                                <div class="option-row">
+
+                                    <label class="option">
+                                        <input
+                                            type="radio"
+                                            name="fever"
+                                            value="yes"
+                                        >
+                                        Ya
+                                    </label>
+
+                                    <label class="option">
+                                        <input
+                                            type="radio"
+                                            name="fever"
+                                            value="no"
+                                            checked
+                                        >
+                                        Tidak
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="question">
+
+                                <p>
+                                    2. Apakah Anda mengalami batuk
+                                    atau keluhan pernapasan?
+                                </p>
+
+                                <div class="option-row">
+
+                                    <label class="option">
+                                        <input
+                                            type="radio"
+                                            name="cough"
+                                            value="yes"
+                                        >
+                                        Ya
+                                    </label>
+
+                                    <label class="option">
+                                        <input
+                                            type="radio"
+                                            name="cough"
+                                            value="no"
+                                            checked
+                                        >
+                                        Tidak
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="question">
+
+                                <p>3. Apakah Anda mengalami sesak napas?</p>
+
+                                <div class="option-row">
+
+                                    <label class="option">
+                                        <input
+                                            type="radio"
+                                            name="breath"
+                                            value="yes"
+                                        >
+                                        Ya
+                                    </label>
+
+                                    <label class="option">
+                                        <input
+                                            type="radio"
+                                            name="breath"
+                                            value="no"
+                                            checked
+                                        >
+                                        Tidak
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="question">
+
+                                <p>
+                                    4. Apakah Anda memiliki riwayat kontak
+                                    dengan kasus infeksi?
+                                </p>
+
+                                <div class="option-row">
+
+                                    <label class="option">
+                                        <input
+                                            type="radio"
+                                            name="contact"
+                                            value="yes"
+                                        >
+                                        Ya
+                                    </label>
+
+                                    <label class="option">
+                                        <input
+                                            type="radio"
+                                            name="contact"
+                                            value="no"
+                                            checked
+                                        >
+                                        Tidak
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                class="btn btn-primary"
+                                id="screenBtn"
+                                type="button"
+                            >
+                                START SCREENING
+                            </button>
+
+
+                            <div
+                                id="screenResult"
+                                class="result"
+                            ></div>
+
+                        </div>
+
+
+                        <!-- =========================
+                             RIGHT SIDE
+                        ========================== -->
+
+                        <div class="prototype-right">
+
+
+                            <!-- REMOTE MONITORING -->
+
+                            <div class="screen-card">
+
+                                <div class="card-title-row">
+
+                                    <div>
+                                        <span class="mini-label">
+                                            REMOTE PATIENT MONITORING
+                                        </span>
+
+                                        <h3>📊 Remote Monitoring</h3>
+                                    </div>
+
+                                </div>
+
+
+                                <p class="muted">
+                                    Contoh dashboard pemantauan kondisi
+                                    pasien dari jarak jauh.
+                                </p>
+
+
+                                <div class="dashboard">
+
+                                    <div class="metric">
+
+                                        <span class="metric-icon">
+                                            🌡️
+                                        </span>
+
+                                        <b>37.2°C</b>
+
+                                        <small>
+                                            Suhu
+                                        </small>
+
+                                    </div>
+
+
+                                    <div class="metric">
+
+                                        <span class="metric-icon">
+                                            🫁
+                                        </span>
+
+                                        <b>98%</b>
+
+                                        <small>
+                                            SpO₂ demo
+                                        </small>
+
+                                    </div>
+
+
+                                    <div class="metric">
+
+                                        <span class="metric-icon">
+                                            💨
+                                        </span>
+
+                                        <b>18/min</b>
+
+                                        <small>
+                                            RR demo
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- REMINDER -->
+
+                            <div class="screen-card">
+
+                                <span class="mini-label">
+                                    DIGITAL REMINDER
+                                </span>
+
+                                <h3>🔔 Reminder</h3>
+
+                                <p class="muted">
+                                    Pengingat aktivitas kesehatan pasien.
+                                </p>
+
+
+                                <div class="checklist">
+
+                                    <label class="check-item">
+
+                                        <input type="checkbox">
+
+                                        <span>
+                                            Cek suhu tubuh
+                                        </span>
+
+                                    </label>
+
+
+                                    <label class="check-item">
+
+                                        <input type="checkbox">
+
+                                        <span>
+                                            Catat gejala harian
+                                        </span>
+
+                                    </label>
+
+
+                                    <label class="check-item">
+
+                                        <input type="checkbox">
+
+                                        <span>
+                                            Ikuti jadwal konsultasi
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- ALUR TELEHEALTH -->
+
+                            <div class="screen-card">
+
+                                <span class="mini-label">
+                                    TELEHEALTH WORKFLOW
+                                </span>
+
+                                <h3>🩺 Alur PandemicCare</h3>
+
+
+                                <div class="workflow">
+
+                                    <div class="workflow-step">
+                                        <span>01</span>
+                                        <p>
+                                            Self-Assessment
+                                        </p>
+                                    </div>
+
+                                    <div class="workflow-arrow">
+                                        →
+                                    </div>
+
+                                    <div class="workflow-step">
+                                        <span>02</span>
+                                        <p>
+                                            Risk Assessment
+                                        </p>
+                                    </div>
+
+                                    <div class="workflow-arrow">
+                                        →
+                                    </div>
+
+                                    <div class="workflow-step">
+                                        <span>03</span>
+                                        <p>
+                                            Teleconsultation
+                                        </p>
+                                    </div>
+
+                                    <div class="workflow-arrow">
+                                        →
+                                    </div>
+
+                                    <div class="workflow-step">
+                                        <span>04</span>
+                                        <p>
+                                            Advice / Referral
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PENJELASAN PROTOTYPE -->
+
+        <div class="prototype-explanation">
+
+            <div class="explanation-card">
+
+                <span class="eyebrow">
+                    HOW IT WORKS
+                </span>
+
+                <h3>
+                    Integrasi Fitur Telehealth
+                </h3>
+
+                <p>
+                    Prototype PandemicCare menggabungkan beberapa konsep
+                    telehealth dalam satu alur digital. Pengguna dapat
+                    melakukan skrining awal, melihat contoh pemantauan
+                    parameter kesehatan, menerima pengingat aktivitas,
+                    kemudian diarahkan menuju konsultasi atau rujukan
+                    apabila diperlukan.
+                </p>
+
+            </div>
+
+
+            <div class="explanation-card">
+
+                <span class="eyebrow">
+                    IMPORTANT NOTE
+                </span>
+
+                <h3>
+                    Prototype Edukasi
+                </h3>
+
+                <p>
+                    PandemicCare merupakan prototype untuk tujuan edukasi.
+                    Nilai pada dashboard merupakan data demonstrasi dan
+                    bukan data pasien sebenarnya. Hasil self-screening
+                    tidak menggantikan diagnosis, pemeriksaan langsung,
+                    atau keputusan klinis tenaga kesehatan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- TRIAGE FLOW -->
+    <section class="triage-section">
+
+        <div class="container">
+
+            <div class="section-heading center">
+
+                <span class="eyebrow">
+                    REMOTE TRIAGE
+                </span>
+
+                <h2>
+                    From symptoms
+                    <span>to action.</span>
+                </h2>
+
+                <p>
+                    Telehealth dapat membantu mengarahkan pasien
+                    berdasarkan kondisi dan kebutuhan pelayanan.
+                </p>
+
+            </div>
+
+
+            <div class="triage-flow">
+
+                <div class="triage-step">
+
+                    <div class="step-circle">
+                        01
+                    </div>
+
+                    <h3>
+                        Patient
+                    </h3>
+
+                    <p>
+                        Melaporkan gejala dan kondisi kesehatan
+                        melalui platform digital.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-line"></div>
+
+
+                <div class="triage-step">
+
+                    <div class="step-circle">
+                        02
+                    </div>
+
+                    <h3>
+                        Digital Assessment
+                    </h3>
+
+                    <p>
+                        Data dan gejala dikaji untuk menentukan
+                        kebutuhan tindak lanjut.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-line"></div>
+
+
+                <div class="triage-step">
+
+                    <div class="step-circle">
+                        03
+                    </div>
+
+                    <h3>
+                        Clinical Decision
+                    </h3>
+
+                    <p>
+                        Tenaga kesehatan menentukan rekomendasi
+                        berdasarkan hasil pengkajian.
+                    </p>
+
+                </div>
+
+
+                <div class="flow-line"></div>
+
+
+                <div class="triage-step">
+
+                    <div class="step-circle">
+                        04
+                    </div>
+
+                    <h3>
+                        Action
+                    </h3>
+
+                    <p>
+                        Konsultasi lanjutan, pemantauan,
+                        atau rujukan sesuai kebutuhan.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRIAGE CATEGORIES -->
+
+            <div class="triage-categories">
+
+                <div class="triage-category danger">
+
+                    <span class="category-icon">!</span>
+
+                    <div>
+                        <strong>Rujukan Rumah Sakit</strong>
+                        <p>
+                            Pasien dengan gejala berat atau kondisi
+                            yang membutuhkan evaluasi langsung.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="triage-category warning">
+
+                    <span class="category-icon">◐</span>
+
+                    <div>
+                        <strong>Fasilitas / Isolasi Terpadu</strong>
+                        <p>
+                            Pasien dengan kondisi yang memerlukan
+                            pemantauan atau fasilitas khusus.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="triage-category safe">
+
+                    <span class="category-icon">✓</span>
+
+                    <div>
+                        <strong>Isolasi Mandiri</strong>
+                        <p>
+                            Kasus ringan atau tanpa gejala dengan
+                            pemantauan dan edukasi yang sesuai.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RPM DASHBOARD -->
+    <section class="rpm-section">
+
+        <div class="container">
+
+            <div class="rpm-layout">
+
+                <div class="rpm-text">
+
+                    <span class="eyebrow">
+                        REMOTE PATIENT MONITORING
+                    </span>
+
+                    <h2>
+                        Monitor health
+                        <span>from anywhere.</span>
+                    </h2>
+
+                    <p>
+                        Remote Patient Monitoring memungkinkan data
+                        kesehatan pasien dikumpulkan secara berkala
+                        dan digunakan oleh tenaga kesehatan untuk
+                        memantau perubahan kondisi.
+                    </p>
+
+                    <div class="rpm-points">
+
+                        <div>
+                            <span>01</span>
+                            <p>
+                                Pengukuran dilakukan menggunakan
+                                perangkat kesehatan mandiri.
+                            </p>
+                        </div>
+
+                        <div>
+                            <span>02</span>
+                            <p>
+                                Data dilaporkan melalui aplikasi
+                                atau media komunikasi digital.
+                            </p>
+                        </div>
+
+                        <div>
+                            <span>03</span>
+                            <p>
+                                Tenaga kesehatan mengevaluasi
+                                perubahan kondisi pasien.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DASHBOARD -->
+                <div class="rpm-dashboard">
+
+                    <div class="dashboard-header">
+
+                        <div>
+                            <small>REMOTE MONITORING</small>
+                            <strong>Patient Dashboard</strong>
+                        </div>
+
+                        <span class="online">
+                            ● Online
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-patient">
+
+                        <div class="patient-avatar">
+                            P
+                        </div>
+
+                        <div>
+                            <strong>Patient #024</strong>
+                            <small>Last update: 2 min ago</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="vital-grid">
+
+                        <div class="vital-card">
+
+                            <span class="vital-label">
+                                SpO₂
+                            </span>
+
+                            <strong>
+                                97<span>%</span>
+                            </strong>
+
+                            <small>
+                                Normal range
+                            </small>
+
+                        </div>
+
+
+                        <div class="vital-card">
+
+                            <span class="vital-label">
+                                Temperature
+                            </span>
+
+                            <strong>
+                                36.7<span>°C</span>
+                            </strong>
+
+                            <small>
+                                Normal
+                            </small>
+
+                        </div>
+
+
+                        <div class="vital-card">
+
+                            <span class="vital-label">
+                                Respiration
+                            </span>
+
+                            <strong>
+                                18<span>/min</span>
+                            </strong>
+
+                            <small>
+                                Stable
+                            </small>
+
+                        </div>
+
+
+                        <div class="vital-card">
+
+                            <span class="vital-label">
+                                Blood Pressure
+                            </span>
+
+                            <strong>
+                                120/80
+                            </strong>
+
+                            <small>
+                                Normal
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-alert">
+
+                        <span>✓</span>
+
+                        <div>
+                            <strong>
+                                No critical alert
+                            </strong>
+
+                            <small>
+                                Continue routine monitoring.
+                            </small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CHATBOT -->
+    <section class="chatbot-section">
+
+        <div class="container">
+
+            <div class="chatbot-heading">
+
+                <span class="eyebrow">
+                    AI-POWERED TRIAGE CHATBOT
+                </span>
+
+                <h2>
+                    Ask. Check.
+                    <span>Connect.</span>
+                </h2>
+
+                <p>
+                    Prototype chatbot edukasi untuk memberikan
+                    informasi awal mengenai COVID-19, telehealth,
+                    pencegahan, dan pandemic preparedness.
+                </p>
+
+            </div>
+
+
+            <div class="chatbot-demo">
+
+                <div class="chatbot-top">
+
+                    <div class="bot-profile">
+
+                        <div class="bot-avatar">
+                            ✦
+                        </div>
+
+                        <div>
+                            <strong>
+                                PandemicPrep Assistant
+                            </strong>
+
+                            <small>
+                                ● Online
+                            </small>
+                        </div>
+
+                    </div>
+
+                    <span class="bot-label">
+                        AI PROTOTYPE
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="chat-messages"
+                    id="chatMessages"
+                >
+
+                    <div class="bubble bot">
+                        Halo! Saya PandemicPrep Assistant.
+                        Kamu bisa bertanya tentang COVID-19,
+                        vaksinasi, masker, telehealth, atau
+                        pandemic preparedness.
+                    </div>
+
+                </div>
+
+
+                <form
+                    class="chat-form"
+                    id="chatForm"
+                >
+
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Contoh: Apa itu telehealth?"
+                        autocomplete="off"
+                    >
+
+                    <button type="submit">
+                        →
+                    </button>
+
+                </form>
+
+                <p class="chat-disclaimer">
+                    Prototype edukasi — bukan pengganti diagnosis
+                    atau konsultasi tenaga kesehatan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOW COST IOT -->
+    <section class="iot-section">
+
+        <div class="container">
+
+            <div class="section-heading center">
+
+                <span class="eyebrow">
+                    LOW-COST HEALTH TECHNOLOGY
+                </span>
+
+                <h2>
+                    Simple technology,
+                    <span>real impact.</span>
+                </h2>
+
+                <p>
+                    Teknologi sederhana dapat dikembangkan untuk
+                    mendukung pemantauan pasien di berbagai kondisi
+                    dan wilayah.
+                </p>
+
+            </div>
+
+
+            <div class="iot-flow">
+
+                <div class="iot-item">
+
+                    <div class="iot-icon">
+                        ◉
+                    </div>
+
+                    <h3>
+                        Pulse Oximeter
+                    </h3>
+
+                    <p>
+                        Mengukur saturasi oksigen dan
+                        denyut nadi pasien.
+                    </p>
+
+                </div>
+
+
+                <div class="iot-arrow">
+                    →
+                </div>
+
+
+                <div class="iot-item">
+
+                    <div class="iot-icon">
+                        ◈
+                    </div>
+
+                    <h3>
+                        Bluetooth / ESP32
+                    </h3>
+
+                    <p>
+                        Mengirimkan data dari perangkat
+                        ke sistem digital.
+                    </p>
+
+                </div>
+
+
+                <div class="iot-arrow">
+                    →
+                </div>
+
+
+                <div class="iot-item">
+
+                    <div class="iot-icon">
+                        ▣
+                    </div>
+
+                    <h3>
+                        Digital Dashboard
+                    </h3>
+
+                    <p>
+                        Data dapat ditampilkan untuk
+                        pemantauan oleh tenaga kesehatan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NURSING ROLE -->
+    <section class="nursing-role">
+
+        <div class="container">
+
+            <div class="nursing-role-box">
+
+                <div>
+
+                    <span class="eyebrow">
+                        NURSING PERSPECTIVE
+                    </span>
+
+                    <h2>
+                        The nurse remains
+                        <span>at the center.</span>
+                    </h2>
+
+                    <p>
+                        Teknologi mendukung pelayanan, tetapi
+                        pengkajian klinis, edukasi, komunikasi,
+                        pemantauan, dan pengambilan keputusan
+                        tetap membutuhkan peran tenaga kesehatan.
+                    </p>
+
+                </div>
+
+
+                <div class="role-list">
+
+                    <div>
+                        <span>01</span>
+                        <strong>Educator</strong>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <strong>Communicator</strong>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <strong>Monitor</strong>
+                    </div>
+
+                    <div>
+                        <span>04</span>
+                        <strong>Care Coordinator</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KEY TAKEAWAY -->
+    <section class="telehealth-takeaway">
+
+        <div class="container">
+
+            <div class="takeaway-box">
+
+                <span class="eyebrow">
+                    KEY TAKEAWAY
+                </span>
+
+                <h2>
+                    Telehealth does not replace
+                    healthcare.
+                    <span>It extends its reach.</span>
+                </h2>
+
+                <p>
+                    Telehealth membantu memperluas akses,
+                    mempertahankan kontinuitas pelayanan,
+                    mendukung pemantauan pasien, dan
+                    mempercepat komunikasi selama
+                    kedaruratan kesehatan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <div>
+                <strong>PandemicPrep</strong>
+                <p>
+                    Pandemic Preparedness:
+                    COVID-19 & Emerging Diseases
+                </p>
+            </div>
+
+            <div>
+                Kelompok 2
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../script.js"></script>
+
+</body>
+</html>

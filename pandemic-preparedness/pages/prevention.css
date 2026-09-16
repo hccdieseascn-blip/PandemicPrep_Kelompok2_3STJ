@@ -1,0 +1,1341 @@
+/* =========================================================
+   PREVENTION STRATEGY
+   ========================================================= */
+
+.prevention-page {
+    --prevention-red: var(--red, #a71928);
+    --prevention-red2: var(--red2, #c72a3b);
+    --prevention-bg: var(--bg, #fffafa);
+    --prevention-paper: var(--paper, #ffffff);
+    --prevention-text: var(--ink, #281b1d);
+    --prevention-muted: var(--muted, #77686b);
+    --prevention-line: var(--line, rgba(112, 15, 25, .15));
+    --prevention-soft: var(--soft, #f8e8e9);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.prevention-page .prevention-hero {
+    min-height: 500px;
+    overflow: hidden;
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(199, 42, 59, .10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 30%,
+            rgba(235, 180, 190, .18),
+            transparent 32%
+        ),
+        var(--prevention-bg);
+
+    border-bottom: 1px solid var(--prevention-line);
+}
+
+
+.prevention-page .prevention-hero-inner {
+    width: min(1200px, calc(100% - 80px));
+    min-height: 500px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr .9fr;
+    align-items: center;
+}
+
+
+/* HERO TEXT */
+
+.prevention-page .prevention-hero-content {
+    position: relative;
+    z-index: 5;
+}
+
+
+.prevention-page .prevention-kicker {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 25px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+
+    color: var(--prevention-red);
+}
+
+
+.prevention-page .prevention-kicker i {
+    display: block;
+    width: 100px;
+    height: 2px;
+
+    background: rgba(199, 42, 59, .25);
+}
+
+
+.prevention-page .prevention-hero h1 {
+    max-width: 680px;
+    margin: 0;
+
+    font-family: Poppins, Inter, sans-serif;
+    font-size: clamp(55px, 6vw, 82px);
+    line-height: .98;
+    letter-spacing: -3px;
+
+    color: var(--prevention-text);
+}
+
+
+.prevention-page .prevention-hero h1 span {
+    color: var(--prevention-red);
+}
+
+
+.prevention-page .prevention-hero p {
+    max-width: 610px;
+
+    margin: 30px 0;
+
+    font-size: 17px;
+    line-height: 1.75;
+
+    color: var(--prevention-muted);
+}
+
+
+.prevention-page .prevention-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 13px 20px;
+
+    border-radius: 999px;
+
+    background: var(--prevention-red);
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition: .25s ease;
+}
+
+
+.prevention-page .prevention-hero-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+.prevention-page .prevention-hero-btn span {
+    color: white;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.prevention-page .prevention-hero-visual {
+    height: 430px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.prevention-page .prevention-shield {
+    width: 180px;
+    height: 210px;
+
+    position: relative;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        145deg,
+        rgba(199, 42, 59, .95),
+        rgba(167, 25, 40, .88)
+    );
+
+    clip-path: polygon(
+        50% 0,
+        92% 15%,
+        86% 66%,
+        50% 100%,
+        14% 66%,
+        8% 15%
+    );
+
+    box-shadow: 0 30px 60px rgba(167, 25, 40, .22);
+}
+
+
+.prevention-page .shield-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.15);
+
+    color: white;
+
+    font-size: 35px;
+}
+
+
+.prevention-page .prevention-orbit {
+    position: absolute;
+
+    border: 1px solid rgba(199, 42, 59, .15);
+    border-radius: 50%;
+}
+
+
+.prevention-page .orbit-one {
+    width: 310px;
+    height: 310px;
+}
+
+
+.prevention-page .orbit-two {
+    width: 420px;
+    height: 420px;
+
+    border-color: rgba(199, 42, 59, .08);
+}
+
+
+.prevention-page .prevention-dot {
+    position: absolute;
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: var(--prevention-red);
+
+    box-shadow:
+        0 0 0 8px rgba(199,42,59,.08),
+        0 0 0 17px rgba(199,42,59,.04);
+
+    animation: preventionPulse 2.5s infinite;
+}
+
+
+.prevention-page .dot-one {
+    top: 20%;
+    right: 18%;
+}
+
+
+.prevention-page .dot-two {
+    bottom: 20%;
+    right: 12%;
+
+    animation-delay: .7s;
+}
+
+
+.prevention-page .dot-three {
+    left: 13%;
+    top: 48%;
+
+    animation-delay: 1.3s;
+}
+
+
+@keyframes preventionPulse {
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+
+/* LABELS */
+
+.prevention-page .prevention-label {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    padding: 10px 13px;
+
+    background: rgba(255,255,255,.78);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid var(--prevention-line);
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(80,20,30,.08);
+}
+
+
+.prevention-page .prevention-label strong {
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: var(--prevention-red);
+}
+
+
+.prevention-page .prevention-label span {
+    font-size: 11px;
+    color: var(--prevention-muted);
+}
+
+
+.prevention-page .label-one {
+    top: 17%;
+    left: 8%;
+}
+
+
+.prevention-page .label-two {
+    top: 58%;
+    right: 5%;
+}
+
+
+.prevention-page .label-three {
+    bottom: 9%;
+    left: 17%;
+}
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+.prevention-page .prevention-intro,
+.prevention-page .prevention-section,
+.prevention-page .control-section,
+.prevention-page .indonesia-section,
+.prevention-page .who-section,
+.prevention-page .government-section,
+.prevention-page .final-strategy {
+    padding: 90px 0;
+}
+
+
+.prevention-page .soft-section {
+    background: #fff4f5;
+}
+
+
+.prevention-page .section-heading {
+    max-width: 760px;
+}
+
+
+.prevention-page .section-heading.centered {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+
+.prevention-page .section-number {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    color: var(--prevention-red);
+}
+
+
+.prevention-page .section-heading h2,
+.prevention-page .section-title h2 {
+    margin: 0 0 18px;
+
+    font-family: Poppins, Inter, sans-serif;
+
+    font-size: clamp(35px, 4vw, 55px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    color: var(--prevention-text);
+}
+
+
+.prevention-page .section-heading h2 span,
+.prevention-page .section-title h2 span {
+    color: var(--prevention-red);
+}
+
+
+.prevention-page .section-heading p,
+.prevention-page .section-title > p {
+    font-size: 16px;
+    line-height: 1.75;
+
+    color: var(--prevention-muted);
+}
+
+
+/* =========================================================
+   INTEGRATED FLOW
+   ========================================================= */
+
+.prevention-page .integrated-strategy {
+    padding: 85px 0;
+
+    background: var(--prevention-text);
+}
+
+
+.prevention-page .integrated-strategy .section-heading h2 {
+    color: white;
+}
+
+
+.prevention-page .integrated-strategy .section-heading p {
+    color: #cbbdc0;
+}
+
+
+.prevention-page .strategy-flow {
+    margin-top: 50px;
+
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+
+
+.prevention-page .strategy-step {
+    flex: 1;
+
+    padding: 22px;
+
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.05);
+}
+
+
+.prevention-page .strategy-icon {
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: var(--prevention-red);
+    color: white;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+.prevention-page .strategy-step span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #e8a4ad;
+}
+
+
+.prevention-page .strategy-step h3 {
+    margin: 7px 0;
+
+    color: white;
+}
+
+
+.prevention-page .strategy-step p {
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: #b9abad;
+}
+
+
+.prevention-page .flow-arrow {
+    align-self: center;
+
+    color: #bd6974;
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   TWO COLUMN SECTIONS
+   ========================================================= */
+
+.prevention-page .section-layout {
+    display: grid;
+    grid-template-columns: .7fr 1.3fr;
+    gap: 70px;
+    align-items: start;
+}
+
+
+.prevention-page .content-card {
+    padding: 35px;
+
+    border: 1px solid var(--prevention-line);
+    border-radius: 24px;
+
+    background: var(--prevention-paper);
+
+    box-shadow: 0 20px 60px rgba(80,20,30,.06);
+}
+
+
+.prevention-page .card-intro {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid var(--prevention-line);
+}
+
+
+.prevention-page .card-intro strong {
+    color: var(--prevention-red);
+}
+
+
+.prevention-page .card-intro p {
+    margin-bottom: 0;
+
+    line-height: 1.7;
+    color: var(--prevention-muted);
+}
+
+
+/* CHECK LIST */
+
+.prevention-page .check-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+
+.prevention-page .check-list > div {
+    display: flex;
+    gap: 12px;
+}
+
+
+.prevention-page .check-list span {
+    min-width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--prevention-soft);
+    color: var(--prevention-red);
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+
+.prevention-page .check-list p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.55;
+
+    color: var(--prevention-muted);
+}
+
+
+/* =========================================================
+   PREVENTION CARDS
+   ========================================================= */
+
+.prevention-page .prevention-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+
+.prevention-page .strategy-card {
+    padding: 30px;
+
+    border: 1px solid var(--prevention-line);
+    border-radius: 22px;
+
+    background: var(--prevention-paper);
+
+    transition: .25s ease;
+}
+
+
+.prevention-page .strategy-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 50px rgba(80,20,30,.08);
+}
+
+
+.prevention-page .card-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    background: var(--prevention-soft);
+    color: var(--prevention-red);
+
+    font-weight: 800;
+    font-size: 11px;
+}
+
+
+.prevention-page .strategy-card > span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 800;
+
+    color: var(--prevention-red);
+}
+
+
+.prevention-page .strategy-card h3 {
+    margin: 7px 0 12px;
+
+    font-size: 23px;
+}
+
+
+.prevention-page .strategy-card p,
+.prevention-page .strategy-card li {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--prevention-muted);
+}
+
+
+.prevention-page .strategy-card ul {
+    padding-left: 18px;
+}
+
+
+/* =========================================================
+   CONTROL
+   ========================================================= */
+
+.prevention-page .control-section {
+    background: var(--prevention-bg);
+}
+
+
+.prevention-page .control-grid {
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+
+.prevention-page .control-card {
+    padding: 27px;
+
+    border: 1px solid var(--prevention-line);
+    border-radius: 20px;
+
+    background: var(--prevention-paper);
+}
+
+
+.prevention-page .control-card strong {
+    color: var(--prevention-red);
+    font-size: 11px;
+}
+
+
+.prevention-page .control-card h3 {
+    margin: 12px 0 7px;
+}
+
+
+.prevention-page .control-card p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: var(--prevention-muted);
+}
+
+
+/* SURVEILLANCE */
+
+.prevention-page .surveillance-highlight {
+    margin-top: 35px;
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    border-radius: 22px;
+
+    background: var(--prevention-text);
+    color: white;
+}
+
+
+.prevention-page .highlight-number {
+    min-width: 120px;
+
+    font-size: 55px;
+    font-weight: 800;
+
+    color: #efb1b8;
+}
+
+
+.prevention-page .highlight-number small {
+    display: block;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+
+    color: #9f8d91;
+}
+
+
+.prevention-page .surveillance-highlight span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #e39da6;
+}
+
+
+.prevention-page .surveillance-highlight h3 {
+    margin: 7px 0;
+}
+
+
+.prevention-page .surveillance-highlight p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 1.65;
+
+    color: #c3b5b8;
+}
+
+
+/* =========================================================
+   INDONESIA
+   ========================================================= */
+
+.prevention-page .indonesia-content {
+    max-width: 750px;
+}
+
+
+.prevention-page .indonesia-content > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--prevention-muted);
+}
+
+
+.prevention-page .indonesia-system {
+    margin-top: 35px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+
+.prevention-page .indonesia-system > div {
+    padding: 25px;
+
+    border: 1px solid var(--prevention-line);
+    border-radius: 18px;
+
+    background: var(--prevention-paper);
+}
+
+
+.prevention-page .indonesia-system strong {
+    display: block;
+
+    font-size: 27px;
+    color: var(--prevention-red);
+}
+
+
+.prevention-page .indonesia-system span {
+    display: block;
+
+    margin: 5px 0 10px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.prevention-page .indonesia-system p {
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: var(--prevention-muted);
+}
+
+
+/* =========================================================
+   WHO
+   ========================================================= */
+
+.prevention-page .who-grid {
+    margin-top: 45px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+
+.prevention-page .who-card {
+    padding: 27px;
+
+    border: 1px solid var(--prevention-line);
+    border-radius: 18px;
+
+    background: white;
+}
+
+
+.prevention-page .who-card > span {
+    color: var(--prevention-red);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+.prevention-page .who-card h3 {
+    margin: 12px 0 7px;
+}
+
+
+.prevention-page .who-card p {
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    color: var(--prevention-muted);
+}
+
+
+.prevention-page .pret-box {
+    margin-top: 30px;
+    padding: 35px;
+
+    border-radius: 22px;
+
+    background: var(--prevention-red);
+    color: white;
+}
+
+
+.prevention-page .pret-box > span {
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+.prevention-page .pret-box h3 {
+    max-width: 700px;
+
+    margin: 10px 0;
+
+    font-size: 27px;
+}
+
+
+.prevention-page .pret-box p {
+    max-width: 800px;
+
+    margin: 0;
+
+    color: #f5dadd;
+
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   GOVERNMENT
+   ========================================================= */
+
+.prevention-page .government-grid {
+    margin-top: 45px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+.prevention-page .government-card {
+    padding: 27px;
+
+    border: 1px solid var(--prevention-line);
+    border-radius: 20px;
+
+    background: var(--prevention-paper);
+}
+
+
+.prevention-page .government-card > span {
+    color: var(--prevention-red);
+    font-weight: 800;
+    font-size: 11px;
+}
+
+
+.prevention-page .government-card h3 {
+    min-height: 55px;
+
+    margin: 12px 0;
+}
+
+
+.prevention-page .government-card ul {
+    padding-left: 17px;
+    margin-bottom: 0;
+}
+
+
+.prevention-page .government-card li {
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: var(--prevention-muted);
+}
+
+
+.prevention-page .government-note {
+    margin-top: 25px;
+    padding: 25px 30px;
+
+    border-left: 4px solid var(--prevention-red);
+
+    background: var(--prevention-soft);
+}
+
+
+.prevention-page .government-note strong {
+    color: var(--prevention-red);
+}
+
+
+.prevention-page .government-note p {
+    margin: 8px 0 0;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: var(--prevention-muted);
+}
+
+
+/* =========================================================
+   FINAL STRATEGY
+   ========================================================= */
+
+.prevention-page .final-strategy {
+    background: var(--prevention-text);
+    color: white;
+}
+
+
+.prevention-page .final-heading {
+    max-width: 700px;
+}
+
+
+.prevention-page .final-heading > span {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #e4a0a8;
+}
+
+
+.prevention-page .final-heading h2 {
+    margin: 15px 0;
+
+    font-family: Poppins, Inter, sans-serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+
+.prevention-page .final-heading em {
+    color: #dc7c87;
+    font-style: normal;
+}
+
+
+.prevention-page .final-heading p {
+    max-width: 650px;
+
+    color: #c5b5b8;
+
+    line-height: 1.7;
+}
+
+
+/* FINAL FLOW */
+
+.prevention-page .final-flow {
+    margin-top: 60px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.prevention-page .final-stage {
+    flex: 1;
+
+    min-height: 125px;
+    padding: 20px;
+
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 17px;
+
+    background: rgba(255,255,255,.04);
+}
+
+
+.prevention-page .final-stage span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 10px;
+    color: #e19aa2;
+}
+
+
+.prevention-page .final-stage strong {
+    display: block;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+
+.prevention-page .final-stage small {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 10px;
+    line-height: 1.5;
+
+    color: #a99a9e;
+}
+
+
+.prevention-page .final-arrow {
+    color: #b95c68;
+    font-size: 18px;
+}
+
+
+/* FINAL MESSAGE */
+
+.prevention-page .final-message {
+    margin-top: 45px;
+    padding: 30px;
+
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.05);
+}
+
+
+.prevention-page .final-message-mark {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: var(--prevention-red);
+
+    font-size: 25px;
+}
+
+
+.prevention-page .final-message h3 {
+    margin: 0 0 8px;
+
+    font-size: 22px;
+}
+
+
+.prevention-page .final-message h3 span {
+    color: #dd7d87;
+}
+
+
+.prevention-page .final-message p {
+    max-width: 800px;
+
+    margin: 0;
+
+    color: #bcaeb1;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark .prevention-page .prevention-hero,
+body.dark .prevention-page .control-section,
+body.dark .prevention-page .government-section {
+    background: #211719;
+}
+
+
+body.dark .prevention-page .prevention-hero h1,
+body.dark .prevention-page .section-heading h2,
+body.dark .prevention-page .section-title h2 {
+    color: #fff5f5;
+}
+
+
+body.dark .prevention-page .strategy-card,
+body.dark .prevention-page .control-card,
+body.dark .prevention-page .content-card,
+body.dark .prevention-page .who-card,
+body.dark .prevention-page .government-card,
+body.dark .prevention-page .indonesia-system > div {
+    background: #2b2022;
+    border-color: rgba(255,255,255,.1);
+}
+
+
+body.dark .prevention-page .soft-section {
+    background: #291d1f;
+}
+
+
+body.dark .prevention-page .prevention-label {
+    background: rgba(43,32,34,.85);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .prevention-page .prevention-hero-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .prevention-page .prevention-hero-content {
+        padding-top: 70px;
+    }
+
+    .prevention-page .prevention-hero-visual {
+        height: 330px;
+    }
+
+    .prevention-page .section-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .prevention-page .prevention-cards,
+    .prevention-page .control-grid,
+    .prevention-page .who-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prevention-page .government-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .prevention-page .strategy-flow,
+    .prevention-page .final-flow {
+        flex-wrap: wrap;
+    }
+
+    .prevention-page .strategy-step,
+    .prevention-page .final-stage {
+        min-width: 180px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .prevention-page .prevention-hero-inner {
+        width: calc(100% - 30px);
+    }
+
+    .prevention-page .prevention-hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .prevention-page .prevention-hero p {
+        font-size: 15px;
+    }
+
+    .prevention-page .prevention-hero-visual {
+        height: 280px;
+    }
+
+    .prevention-page .orbit-two {
+        width: 280px;
+        height: 280px;
+    }
+
+    .prevention-page .orbit-one {
+        width: 210px;
+        height: 210px;
+    }
+
+    .prevention-page .prevention-shield {
+        width: 130px;
+        height: 155px;
+    }
+
+    .prevention-page .prevention-label {
+        display: none;
+    }
+
+    .prevention-page .prevention-intro,
+    .prevention-page .prevention-section,
+    .prevention-page .control-section,
+    .prevention-page .indonesia-section,
+    .prevention-page .who-section,
+    .prevention-page .government-section,
+    .prevention-page .final-strategy {
+        padding: 65px 0;
+    }
+
+    .prevention-page .section-heading h2,
+    .prevention-page .section-title h2 {
+        font-size: 38px;
+    }
+
+    .prevention-page .check-list,
+    .prevention-page .prevention-cards,
+    .prevention-page .control-grid,
+    .prevention-page .who-grid,
+    .prevention-page .government-grid,
+    .prevention-page .indonesia-system {
+        grid-template-columns: 1fr;
+    }
+
+    .prevention-page .strategy-flow {
+        flex-direction: column;
+    }
+
+    .prevention-page .flow-arrow {
+        transform: rotate(90deg);
+        align-self: center;
+    }
+
+    .prevention-page .surveillance-highlight {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .prevention-page .final-flow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .prevention-page .final-arrow {
+        text-align: center;
+        transform: rotate(90deg);
+    }
+
+    .prevention-page .final-message {
+        flex-direction: column;
+    }
+
+}

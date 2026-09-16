@@ -1,72 +1,703 @@
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>06 Reflection | PandemicPrep Kelompok 2</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css"></head><body><div id="progress"></div><header class="navbar">
-<a class="brand" href="../index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a>
-<button class="menu-toggle">☰</button>
-<nav class="nav-links">
-<a href="../index.html">Home</a><a href="overview.html">Overview</a><a href="mapping.html">Disease Map</a>
-<a href="prevention.html">Prevention</a><a href="telehealth.html">Telehealth</a>
-<a href="communication.html">Communication</a><a class="active" href="reflection.html">Reflection</a>
-</nav><button class="theme-toggle" id="themeToggle">☾</button></header>
-<main><section class="page-hero"><div class="container reveal"><span class="eyebrow">06 / REFLECTION</span><h1>What Can Indonesia Learn?</h1><p>Refleksi penerapan pandemic preparedness di Indonesia dan peran strategis perawat.</p></div></section>
-<section class="content-section"><div class="container">
-<div class="callout"><strong>Reflection:</strong> pandemi menunjukkan bahwa kesiapsiagaan bukan hanya persoalan medis, tetapi juga komunikasi, budaya, teknologi, kepercayaan, dan ketahanan sistem kesehatan.</div>
-<h2>A. Hal yang dapat diterapkan di Indonesia</h2>
-<div class="reflection-grid">
-<div class="reflection-card"><span class="eyebrow">LESSON 01</span><h3>Komunikasi berbasis budaya</h3><div class="reflection-answer">Indonesia memiliki keragaman bahasa, budaya, agama, kondisi sosial, dan literasi. Edukasi pandemi perlu disesuaikan dengan karakteristik masyarakat.</div></div>
-<div class="reflection-card"><span class="eyebrow">LESSON 02</span><h3>Literasi kesehatan & digital</h3><div class="reflection-answer">Masyarakat perlu mampu mencari, memahami, menilai, dan menggunakan informasi kesehatan untuk mengurangi misinformation dan infodemic.</div></div>
-<div class="reflection-card"><span class="eyebrow">LESSON 03</span><h3>Teknologi digital</h3><div class="reflection-answer">Website, media sosial, WhatsApp, video, QR Code, leaflet digital, dan telehealth dapat memperluas jangkauan edukasi dan akses informasi.</div></div>
-<div class="reflection-card"><span class="eyebrow">LESSON 04</span><h3>Community engagement</h3><div class="reflection-answer">Tokoh masyarakat, tokoh agama, kader, organisasi, dan kelompok lokal perlu menjadi mitra dalam penyusunan dan penyebaran pesan.</div></div>
-<div class="reflection-card"><span class="eyebrow">LESSON 05</span><h3>Pencegahan misinformation</h3><div class="reflection-answer">Informasi harus berasal dari sumber terpercaya, diperbarui, dan diklarifikasi ketika muncul informasi salah.</div></div>
-</div>
+<html lang="id">
 
-<h2>Alur penerapan</h2><div class="process">
-<div class="process-step"><span class="step-icon">📋</span><h3>PREPARE</h3><p>Rencana, SOP, pelatihan, logistik</p></div>
-<div class="process-step"><span class="step-icon">🔎</span><h3>DETECT</h3><p>Surveilans & early warning</p></div>
-<div class="process-step"><span class="step-icon">⚡</span><h3>RESPOND</h3><p>Respons terkoordinasi</p></div>
-<div class="process-step"><span class="step-icon">🌱</span><h3>RECOVER</h3><p>Pemulihan & evaluasi</p></div>
-<div class="process-step"><span class="step-icon">🔁</span><h3>IMPROVE</h3><p>Perbaikan berkelanjutan</p></div>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<h2>B. Peran Perawat dalam Pandemic Preparedness</h2>
-<div class="nurse-role">
-<div class="role">📚<h3>Edukator</h3><p>Edukasi penyakit, gejala, penularan, pencegahan, vaksinasi, dan perilaku sehat.</p></div>
-<div class="role">📢<h3>Komunikator</h3><p>Menyampaikan informasi dengan bahasa jelas, sederhana, dan sesuai pemahaman pasien.</p></div>
-<div class="role">🛡️<h3>Advokat</h3><p>Memastikan pasien memperoleh informasi benar dan dapat mengambil keputusan berdasarkan pemahaman.</p></div>
-<div class="role">🔗<h3>Penghubung</h3><p>Menghubungkan pasien, keluarga, tim kesehatan, fasilitas, dan sumber informasi terpercaya.</p></div>
-<div class="role">🚫<h3>Pencegah misinformation</h3><p>Mengenali informasi salah dan mengarahkan masyarakat ke sumber resmi.</p></div>
-<div class="role">💻<h3>Pemanfaat teknologi</h3><p>Memanfaatkan telehealth, konsultasi daring, video, QR Code, dan leaflet digital.</p></div>
-</div>
+    <title>06 Reflection | PandemicPrep Kelompok 2</title>
 
-<div class="callout"><h3>Kesimpulan</h3><p>Indonesia membutuhkan preparedness yang terintegrasi: <b>early detection + strong health system + effective communication + digital innovation + community engagement + international collaboration.</b></p></div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
 
-<h2>📚 Referensi utama</h2>
-<div class="references">
-<div class="reference">Clark, E. C., et al. (2024). <i>Changes to Public Health Surveillance Methods Due to the COVID-19 Pandemic: Scoping Review.</i> JMIR Public Health and Surveillance, 10, e49185.</div>
-<div class="reference">Muchangi, J. M., et al. (2024). <i>Enablers and barriers to vaccine uptake and handwashing practices to prevent and control COVID-19...</i> Frontiers in Public Health, 12.</div>
-<div class="reference">McClymont, H., et al. (2024). <i>Internet-based Surveillance Systems and Infectious Diseases Prediction...</i> Journal of Epidemiology and Global Health, 14, 645–657.</div>
-<div class="reference">Nabilah, Z. (2022). <i>Gambaran epidemiologi COVID-19 dan hubungannya dengan perilaku pencegahan di Kota Semarang.</i> Jurnal Kesehatan Masyarakat, 10(1), 75–82.</div>
-<div class="reference">Nasrullah. (2021). <i>Analisis pengaruh COVID-19 terhadap kesehatan mental masyarakat di Indonesia.</i> Media Kesehatan Masyarakat Indonesia.</div>
-<div class="reference">Sitompul, P. A., et al. (2024). <i>Epidemiology of morbidity and mortality of COVID-19 patients...</i> Malaysian Journal of Medical Sciences, 31(5). <a href="https://doi.org/10.21315/mjms2024.31.5.15" target="_blank">DOI</a></div>
-<div class="reference">Sukirman, Muryanto, Malfasari, E., & Mahkota, R. (2022). <i>Karakteristik epidemiologi COVID-19 tahun 2020–2021.</i> Jurnal Epidemiologi Kesehatan Indonesia, 6(1).</div>
-<div class="reference">Wang, M., Yang, B., Liu, Y., Yang, Y., Ji, H., & Yang, C. (2023). <i>Emerging infectious disease surveillance using a hierarchical diagnosis model and the Knox algorithm.</i> Scientific Reports, 13. <a href="https://doi.org/10.1038/s41598-023-47010-1" target="_blank">DOI</a></div>
-<div class="reference">WHO. (2021). <i>Consolidated telemedicine implementation guide.</i> <a href="https://www.who.int/publications/i/item/9789240026223" target="_blank">WHO</a></div>
-<div class="reference">World Health Organization. (2024). <i>WHO policy brief: Building trust through risk communication and community engagement and infodemic management.</i></div>
-<div class="reference">World Health Organization. (2024). <i>WHO competency framework, risk communication and community engagement.</i></div>
-<div class="reference">Kalocsányiová, E., Essex, R., & Fortune, V. (2023). <i>Inequalities in COVID-19 messaging: A systematic scoping review.</i> Health Communication, 38(12), 2549–2558.</div>
-<div class="reference">Arini, H. M., Wijayanto, T., Lathifah, N., et al. (2024). <i>Detecting fake news during COVID-19 in Indonesia: The role of trust level.</i> Journal of Health Communication.</div>
-<div class="reference">Irpan, Masrizal, & Isniati. (2023). <i>Pemetaan Faktor Risiko Corona Virus Disease-19 (COVID-19) pada Kabupaten/Kota di Provinsi Jambi.</i> JKMA, 17(1), 3–10.</div>
-<div class="reference">Pasaribu, E., et al. (2021). <i>Spillover Effects of Social and Economic Interactions on COVID-19 Pandemic Vulnerability Across Indonesia's Regions.</i> ERIA Discussion Paper Series No. 409.</div>
-<div class="reference">Sianturi, M. D., et al. (2025). <i>Visualisasi dan Analisis Klaster COVID-19 Tahun 2020 di Indonesia: Studi Berbasis QGIS.</i> JURRITEK, 4(1), 1–11.</div>
-<div class="reference">Kementerian Kesehatan RI. (2020). <i>Komorbid Jadi Penyebab Terbanyak Kematian Pasien COVID-19.</i></div>
-</div>
-</div></section></main>
-<footer class="footer"><div class="container footer-grid">
-<div><a class="brand" href="../index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a><p>Interactive Digital Website — Global Disease & Communication Project.</p></div>
-<div><strong>Kelompok 2</strong><p>Pandemic Preparedness<br>COVID-19 & Emerging Diseases</p></div>
-<div><strong>Official sources</strong><p><a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> · <a href="https://www.kemkes.go.id/" target="_blank" rel="noopener">Kemenkes RI</a></p></div>
-</div><div class="container footer-bottom">© 2026 Kelompok 2 · Academic/educational purposes.</div></footer>
-<script src="../script.js"></script></body></html>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="reflection.css">
+</head>
+
+<body class="reflection-page">
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <a class="brand" href="../index.html">
+            <span class="brand-mark">✚</span>
+            <span>Pandemic<span>Prep</span></span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Buka menu">
+            ☰
+        </button>
+
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="overview.html">Overview</a>
+            <a href="mapping.html">Disease Map</a>
+            <a href="prevention.html">Prevention</a>
+            <a href="telehealth.html">Telehealth</a>
+            <a href="communication.html">Communication</a>
+            <a href="reflection.html" class="active">Reflection</a>
+        </nav>
+
+        <button class="theme-toggle" id="themeToggle">
+            ☾
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="reflection-hero">
+
+            <div class="reflection-hero-inner">
+
+                <!-- LEFT -->
+                <div class="reflection-hero-content">
+
+                    <span class="reflection-eyebrow">
+                        06 / REFLECTION
+                    </span>
+
+                    <div class="reflection-title-row">
+
+                        <div class="reflection-title-icon">
+                            🇮🇩
+                        </div>
+
+                        <h1>
+                            From Global
+                            <span>to Indonesia.</span>
+                        </h1>
+
+                    </div>
+
+                    <p class="reflection-hero-text">
+                        Refleksi penerapan komunikasi, teknologi, dan
+                        keterlibatan masyarakat dalam meningkatkan
+                        kesiapsiagaan menghadapi pandemi COVID-19
+                        dan emerging diseases di Indonesia.
+                    </p>
+
+                    <div class="reflection-tags">
+
+                        <div class="reflection-tag">
+                            <span>🇮🇩</span>
+                            Indonesia
+                        </div>
+
+                        <div class="reflection-tag">
+                            <span>👥</span>
+                            Community
+                        </div>
+
+                        <div class="reflection-tag">
+                            <span>📱</span>
+                            Digital Health
+                        </div>
+
+                        <div class="reflection-tag">
+                            <span>🩺</span>
+                            Nursing
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT : ILLUSTRATION -->
+                <div class="reflection-hero-visual">
+
+                    <!-- soft circles -->
+                    <div class="reflection-orbit orbit-a"></div>
+                    <div class="reflection-orbit orbit-b"></div>
+
+                    <!-- Indonesia card -->
+                    <div class="indonesia-card">
+
+                        <div class="indonesia-flag">
+                            🇮🇩
+                        </div>
+
+                        <div>
+                            <strong>Indonesia</strong>
+                            <small>Pandemic Preparedness</small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Main community circle -->
+                    <div class="reflection-circle">
+
+                        <div class="circle-glow"></div>
+
+                        <div class="circle-icon">
+                            🩺
+                        </div>
+
+                        <strong>
+                            Prepared
+                        </strong>
+
+                        <span>
+                            People • Health • Technology
+                        </span>
+
+                    </div>
+
+
+                    <!-- people -->
+                    <div class="reflection-person person-a">
+                        👨‍⚕️
+                    </div>
+
+                    <div class="reflection-person person-b">
+                        👨🏻
+                    </div>
+
+                    <div class="reflection-person person-c">
+                        👩🏻
+                    </div>
+
+
+                    <!-- floating information cards -->
+                    <div class="reflection-float float-a">
+                        <span>✓</span>
+                        Trusted Information
+                    </div>
+
+                    <div class="reflection-float float-b">
+                        <span>⌁</span>
+                        Community
+                    </div>
+
+                    <div class="reflection-float float-c">
+                        <span>▣</span>
+                        Digital Health
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SECTION A
+        ====================================================== -->
+
+        <section class="reflection-section">
+
+            <div class="container">
+
+                <div class="section-heading reflection-heading">
+
+                    <span class="mini-label">
+                        A / INDONESIA
+                    </span>
+
+                    <h2>
+                        Hal yang dapat
+                        <span>diterapkan di Indonesia.</span>
+                    </h2>
+
+                    <p>
+                        Kesiapsiagaan pandemi tidak hanya membutuhkan
+                        teknologi, tetapi juga komunikasi yang sesuai
+                        budaya, literasi kesehatan, dan keterlibatan
+                        masyarakat.
+                    </p>
+
+                </div>
+
+
+                <div class="application-grid">
+
+                    <!-- 01 -->
+                    <article class="application-card">
+
+                        <div class="application-top">
+                            <span class="application-number">01</span>
+
+                            <div class="application-icon">
+                                🌏
+                            </div>
+                        </div>
+
+                        <h3>
+                            Mengembangkan komunikasi berbasis budaya
+                        </h3>
+
+                        <p>
+                            Indonesia memiliki keragaman bahasa, budaya,
+                            agama, kondisi sosial, dan tingkat literasi.
+                            Edukasi pandemi perlu disesuaikan dengan
+                            karakteristik masing-masing masyarakat.
+                        </p>
+
+                        <div class="application-line">
+                            <span>KEY POINT</span>
+                            <strong>Culture-sensitive communication</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 02 -->
+                    <article class="application-card">
+
+                        <div class="application-top">
+                            <span class="application-number">02</span>
+
+                            <div class="application-icon">
+                                📚
+                            </div>
+                        </div>
+
+                        <h3>
+                            Meningkatkan literasi kesehatan dan digital
+                        </h3>
+
+                        <p>
+                            Masyarakat perlu dibekali kemampuan untuk
+                            mencari, memahami, menilai, dan menggunakan
+                            informasi kesehatan dengan benar.
+                        </p>
+
+                        <div class="application-line">
+                            <span>KEY POINT</span>
+                            <strong>Health & digital literacy</strong>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 03 -->
+                    <article class="application-card">
+
+                        <div class="application-top">
+                            <span class="application-number">03</span>
+
+                            <div class="application-icon">
+                                📱
+                            </div>
+                        </div>
+
+                        <h3>
+                            Memanfaatkan teknologi digital
+                        </h3>
+
+                        <p>
+                            Teknologi seperti website kesehatan,
+                            media sosial, WhatsApp, video edukasi,
+                            QR Code, leaflet digital, dan telehealth
+                            dapat dimanfaatkan untuk memperluas edukasi.
+                        </p>
+
+                        <div class="technology-list">
+                            <span>Website</span>
+                            <span>WhatsApp</span>
+                            <span>QR Code</span>
+                            <span>Telehealth</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- 04 -->
+                    <article class="application-card">
+
+                        <div class="application-top">
+                            <span class="application-number">04</span>
+
+                            <div class="application-icon">
+                                👥
+                            </div>
+                        </div>
+
+                        <h3>
+                            Melibatkan masyarakat
+                        </h3>
+
+                        <p>
+                            Masyarakat tidak hanya menjadi penerima
+                            informasi, tetapi juga perlu dilibatkan
+                            dalam penyusunan dan penyebaran pesan
+                            kesehatan.
+                        </p>
+
+                        <div class="community-list">
+
+                            <span>Tokoh masyarakat</span>
+                            <span>Tokoh agama</span>
+                            <span>Kader kesehatan</span>
+                            <span>Organisasi masyarakat</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 05 -->
+                    <article class="application-card application-wide">
+
+                        <div class="application-top">
+                            <span class="application-number">05</span>
+
+                            <div class="application-icon">
+                                🛡️
+                            </div>
+                        </div>
+
+                        <div class="application-wide-content">
+
+                            <div>
+                                <h3>
+                                    Memperkuat pencegahan misinformation
+                                </h3>
+
+                                <p>
+                                    Informasi kesehatan harus berasal dari
+                                    sumber yang terpercaya dan diperbarui
+                                    secara berkala. Kepercayaan terhadap
+                                    sumber informasi menjadi faktor penting
+                                    dalam mengenali informasi yang salah.
+                                </p>
+                            </div>
+
+                            <div class="trusted-source-box">
+
+                                <span>TRUSTED INFORMATION</span>
+
+                                <strong>
+                                    Cek sumber sebelum membagikan informasi.
+                                </strong>
+
+                                <small>
+                                    Gunakan informasi kesehatan yang
+                                    terpercaya dan diperbarui secara berkala.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SECTION B - ROLE OF NURSE
+        ====================================================== -->
+
+        <section class="nurse-section">
+
+            <div class="container">
+
+                <div class="nurse-heading">
+
+                    <div>
+
+                        <span class="mini-label">
+                            B / NURSING ROLE
+                        </span>
+
+                        <h2>
+                            Peran Perawat dalam
+                            <span>Pandemic Preparedness.</span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Perawat berinteraksi langsung dengan pasien,
+                        keluarga, dan masyarakat sehingga memiliki
+                        peran penting dalam komunikasi dan kesiapsiagaan
+                        pandemi.
+                    </p>
+
+                </div>
+
+
+                <div class="nurse-role-grid">
+
+                    <!-- 01 -->
+                    <article class="nurse-role">
+
+                        <div class="nurse-role-icon">
+                            🎓
+                        </div>
+
+                        <span class="nurse-role-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Edukator
+                        </h3>
+
+                        <p>
+                            Memberikan edukasi mengenai penyakit,
+                            tanda dan gejala, cara penularan,
+                            pencegahan infeksi, vaksinasi,
+                            fasilitas kesehatan, dan perilaku hidup sehat.
+                        </p>
+
+                        <div class="role-keyword">
+                            Health Education
+                        </div>
+
+                    </article>
+
+
+                    <!-- 02 -->
+                    <article class="nurse-role">
+
+                        <div class="nurse-role-icon">
+                            💬
+                        </div>
+
+                        <span class="nurse-role-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Komunikator
+                        </h3>
+
+                        <p>
+                            Menyampaikan informasi kesehatan dengan
+                            bahasa yang jelas, sederhana, dan sesuai
+                            tingkat pemahaman pasien serta mendengarkan
+                            pertanyaan dan kekhawatiran pasien.
+                        </p>
+
+                        <div class="role-keyword">
+                            Clear Communication
+                        </div>
+
+                    </article>
+
+
+                    <!-- 03 -->
+                    <article class="nurse-role">
+
+                        <div class="nurse-role-icon">
+                            🛡️
+                        </div>
+
+                        <span class="nurse-role-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Advokat Pasien
+                        </h3>
+
+                        <p>
+                            Membantu memastikan pasien mendapatkan
+                            informasi yang benar dan memiliki kesempatan
+                            untuk mengambil keputusan berdasarkan
+                            informasi yang dipahami.
+                        </p>
+
+                        <div class="role-keyword">
+                            Patient Advocacy
+                        </div>
+
+                    </article>
+
+
+                    <!-- 04 -->
+                    <article class="nurse-role">
+
+                        <div class="nurse-role-icon">
+                            🔗
+                        </div>
+
+                        <span class="nurse-role-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Penghubung
+                        </h3>
+
+                        <p>
+                            Menjadi penghubung antara pasien, keluarga,
+                            tenaga kesehatan lain, fasilitas pelayanan
+                            kesehatan, dan sumber informasi terpercaya.
+                        </p>
+
+                        <div class="role-keyword">
+                            Healthcare Link
+                        </div>
+
+                    </article>
+
+
+                    <!-- 05 -->
+                    <article class="nurse-role">
+
+                        <div class="nurse-role-icon">
+                            🔎
+                        </div>
+
+                        <span class="nurse-role-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Pencegah Misinformasi
+                        </h3>
+
+                        <p>
+                            Membantu mengidentifikasi informasi yang salah
+                            dan mengarahkan pasien atau masyarakat kepada
+                            sumber informasi kesehatan yang terpercaya.
+                        </p>
+
+                        <div class="role-keyword">
+                            Infodemic Management
+                        </div>
+
+                    </article>
+
+
+                    <!-- 06 -->
+                    <article class="nurse-role">
+
+                        <div class="nurse-role-icon">
+                            💻
+                        </div>
+
+                        <span class="nurse-role-number">
+                            06
+                        </span>
+
+                        <h3>
+                            Pemanfaat Teknologi Kesehatan
+                        </h3>
+
+                        <p>
+                            Memanfaatkan telehealth, konsultasi daring,
+                            media sosial, video edukasi, QR Code,
+                            dan leaflet digital untuk memperluas
+                            jangkauan edukasi.
+                        </p>
+
+                        <div class="role-keyword">
+                            Digital Health
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CLOSING
+        ====================================================== -->
+
+        <section class="reflection-closing">
+
+            <div class="container">
+
+                <div class="reflection-closing-box">
+
+                    <div class="closing-icon">
+                        ✚
+                    </div>
+
+                    <span class="mini-label">
+                        REFLECTION
+                    </span>
+
+                    <h2>
+                        Preparedness starts with
+                        <span>people.</span>
+                    </h2>
+
+                    <p>
+                        Kesiapsiagaan pandemi membutuhkan komunikasi
+                        yang efektif, masyarakat yang terinformasi,
+                        teknologi yang dimanfaatkan dengan tepat,
+                        dan perawat yang mampu menjadi penghubung
+                        antara informasi kesehatan dan masyarakat.
+                    </p>
+
+                    <div class="closing-points">
+
+                        <span>✓ Communication</span>
+                        <span>✓ Community</span>
+                        <span>✓ Technology</span>
+                        <span>✓ Nursing</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <div>
+                <strong>PandemicPrep</strong>
+                <p>
+                    Pandemic preparedness education
+                    for COVID-19 and emerging diseases.
+                </p>
+            </div>
+
+            <div class="footer-links">
+
+                <a href="../index.html">Home</a>
+                <a href="overview.html">Overview</a>
+                <a href="mapping.html">Disease Map</a>
+                <a href="prevention.html">Prevention</a>
+                <a href="telehealth.html">Telehealth</a>
+                <a href="communication.html">Communication</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

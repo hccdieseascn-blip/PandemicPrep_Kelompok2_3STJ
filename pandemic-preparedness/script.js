@@ -25,84 +25,72 @@ document.addEventListener("DOMContentLoaded", () => {
      THEME TOGGLE
   ====================================================== */
 
-  const themeToggle = document.querySelector("#themeToggle");
+const themeToggle = document.querySelector("#themeToggle");
 
-  const savedTheme = localStorage.getItem("pandemic-theme");
+const savedTheme =
+    localStorage.getItem("pandemic-theme");
 
-  if (savedTheme === "dark") {
+if (savedTheme === "dark") {
     document.body.classList.add("dark");
-  }
+}
 
-  function updateThemeIcon() {
-    if (!themeToggle) return;
+if (themeToggle) {
 
-    const isDark = document.body.classList.contains("dark");
+    themeToggle.addEventListener("click", function () {
 
-    const sun = themeToggle.querySelector(".sun");
-    const moon = themeToggle.querySelector(".moon");
+        document.body.classList.toggle("dark");
 
-    if (sun && moon) {
-      sun.style.opacity = isDark ? "1" : "0.4";
-      moon.style.opacity = isDark ? "0.4" : "1";
-    }
-  }
+        const dark =
+            document.body.classList.contains("dark");
 
-  updateThemeIcon();
+        localStorage.setItem(
+            "pandemic-theme",
+            dark ? "dark" : "light"
+        );
 
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-
-      document.body.classList.toggle("dark");
-
-      const isDark = document.body.classList.contains("dark");
-
-      localStorage.setItem(
-        "pandemic-theme",
-        isDark ? "dark" : "light"
-      );
-
-      updateThemeIcon();
     });
-  }
+
+}
 
 
   /* =====================================================
      HERO PARALLAX EFFECT
   ====================================================== */
 
-  const visual = document.querySelector("#heroVisual");
+const visual = document.getElementById("heroVisual");
 
-  if (visual) {
+if (visual) {
 
-    visual.addEventListener("pointermove", (event) => {
+  visual.addEventListener("pointermove", (e) => {
 
-      const rect = visual.getBoundingClientRect();
+    const r = visual.getBoundingClientRect();
 
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
 
-      visual.querySelectorAll(".covid").forEach(element => {
+    visual.querySelectorAll(".covid").forEach(el => {
 
-        const depth = Number(
-          element.dataset.depth || 1
-        );
+      const depth = Number(el.dataset.depth || 1);
 
-        element.style.transform =
-          `translate(${x * 18 * depth}px, ${y * 14 * depth}px)`;
-      });
+      el.style.marginLeft = `${x * 18 * depth}px`;
+      el.style.marginTop = `${y * 14 * depth}px`;
+
     });
 
+  });
 
-    visual.addEventListener("pointerleave", () => {
+  visual.addEventListener("pointerleave", () => {
 
-      visual.querySelectorAll(".covid").forEach(element => {
+    visual.querySelectorAll(".covid").forEach(el => {
 
-        element.style.transform =
-          "translate(0, 0)";
-      });
+      el.style.marginLeft = "0px";
+      el.style.marginTop = "0px";
+
     });
 
-  }
+  });
+
+}
 
 
   /* =====================================================

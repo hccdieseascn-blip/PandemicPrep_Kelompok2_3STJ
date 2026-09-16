@@ -1,83 +1,1478 @@
-<!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>01 Global Overview | PandemicPrep Kelompok 2</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css"></head><body><div id="progress"></div><header class="navbar">
-<a class="brand" href="../index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a>
-<button class="menu-toggle">☰</button>
-<nav class="nav-links">
-<a href="../index.html">Home</a><a class="active" href="overview.html">Overview</a><a href="mapping.html">Disease Map</a>
-<a href="prevention.html">Prevention</a><a href="telehealth.html">Telehealth</a>
-<a href="communication.html">Communication</a><a href="reflection.html">Reflection</a>
-</nav><button class="theme-toggle" id="themeToggle">☾</button></header>
-<main><section class="page-hero"><div class="container reveal"><span class="eyebrow">01 / GLOBAL DISEASE OVERVIEW</span><h1>COVID-19 & Emerging Diseases</h1><p>Gambaran umum, epidemiologi, faktor risiko, dan dampak kesehatan COVID-19 serta emerging infectious diseases.</p></div></section>
-<section class="content-section"><div class="container">
-<div class="callout"><strong>Inti halaman:</strong> COVID-19 merupakan contoh <b>emerging infectious disease (EID)</b>. Pandemic preparedness diperlukan karena ancaman penyakit menular dapat muncul, muncul kembali, berubah, dan menyebar mengikuti dinamika agen–pejamu–lingkungan.</div>
+<head>
 
-<div class="stat-grid">
-<div class="stat-card"><b>60–80%</b><span>perkiraan infeksi baru manusia yang berasal dari zoonosis</span></div>
-<div class="stat-card"><b>40+</b><span>EID baru terdeteksi dalam sekitar 30 tahun terakhir</span></div>
-<div class="stat-card"><b>220</b><span>negara terdampak COVID-19 pada data awal pandemi yang dirujuk</span></div>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Interactive Digital Website Kelompok 2 - Pandemic Preparedness: COVID-19 & Emerging Diseases"
+    >
+
+    <title>01 Global Overview | PandemicPrep Kelompok 2</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS UTAMA HOME -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- CSS KHUSUS OVERVIEW -->
+    <link rel="stylesheet" href="overview.css">
+
+</head>
+
+<body class="overview-page">
+
+<!-- =========================================================
+     PROGRESS BAR
+========================================================= -->
+
+<div class="overview-progress">
+    <div id="overviewProgress"></div>
 </div>
 
-<h2>1. Definisi dan klasifikasi</h2>
-<p>COVID-19 termasuk kategori <i>emerging infectious disease</i> (EID), yaitu penyakit yang baru muncul atau muncul kembali (<i>reemerging</i>) pada populasi manusia. Rujukan NIAID/NCBI mencakup SARS, MERS, COVID-19, influenza, penyakit jamur, pes, skistosomiasis, cacar, penyakit tular-kutu, dan demam West Nile sebagai contoh EID; malaria, TB, kolera, dan pertusis dapat dikategorikan sebagai penyakit lama yang muncul kembali (<i>reemerging disease</i>) (NCBI, 2024).</p>
-<p>Secara umum, EID dapat berbentuk: penyakit yang benar-benar baru; penyakit lama yang muncul di area/populasi baru; penyakit lama yang diperkenalkan kembali; penyakit yang semula ringan tetapi menjadi lebih berat; serta penyakit yang semula dapat dicegah/diobati tetapi menjadi sulit dikendalikan atau resisten terhadap terapi (Wang et al., 2023).</p>
 
-<div class="card-grid">
-<div class="info-card"><span class="icon">🆕</span><h3>New disease</h3><p>Patogen atau penyakit baru muncul pada manusia.</p></div>
-<div class="info-card"><span class="icon">🗺️</span><h3>New area/population</h3><p>Penyakit lama mencapai wilayah atau populasi yang sebelumnya belum terdampak.</p></div>
-<div class="info-card"><span class="icon">🔁</span><h3>Re-emerging</h3><p>Penyakit lama kembali meningkat setelah sebelumnya terkendali.</p></div>
-<div class="info-card"><span class="icon">⚠️</span><h3>Increasing severity</h3><p>Penyakit yang sebelumnya ringan berubah menjadi lebih berat.</p></div>
-<div class="info-card"><span class="icon">🧫</span><h3>Resistance</h3><p>Patogen berkembang sehingga pencegahan atau pengobatan menjadi lebih sulit.</p></div>
-</div>
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+<header class="navbar">
 
-<h2>2. Faktor pendorong munculnya EID</h2>
-<p>Kemunculan EID dipengaruhi interaksi berkelanjutan antara <b>agen mikroba, pejamu manusia, dan lingkungan manusia</b> (NCBI, 2024).</p>
-<div class="three-col">
-<div class="info-card"><span class="icon">🧬</span><h3>Agen mikroba</h3><ul><li>Adaptasi genetik</li><li>Perubahan host range</li><li>Penyakit polimikroba</li><li>Resistensi antimikroba</li></ul></div>
-<div class="info-card"><span class="icon">👥</span><h3>Pejamu manusia</h3><ul><li>Kerentanan terhadap infeksi</li><li>Demografi</li><li>Perilaku</li><li>Mobilitas/perjalanan</li></ul></div>
-<div class="info-card"><span class="icon">🌎</span><h3>Lingkungan</h3><ul><li>Iklim/cuaca</li><li>Perubahan ekosistem</li><li>Kemiskinan</li><li>Populasi hewan</li></ul></div>
-</div>
+  <a class="brand" href="../index.html">
+    <span class="brand-mark">✚</span>
 
-<div class="callout"><strong>One Health:</strong> sekitar 60–80% infeksi baru pada manusia diperkirakan berasal dari hewan. Integrasi kesehatan manusia, hewan, dan lingkungan, ditambah analisis <i>omics</i> dan kecerdasan buatan, dapat membantu mendeteksi mikroorganisme berprioritas tinggi lebih cepat (NCBI, 2024).</div>
+    <span>
+      Pandemic<span>Prep</span>
+    </span>
+  </a>
 
-<h2>3. Epidemiologi global</h2>
-<p>Per Maret 2021, pandemi COVID-19 yang disebabkan SARS-CoV-2 telah menyebabkan sekitar 2 juta kematian di 220 negara menurut sumber yang dirujuk Nabilah (2022). EID lain seperti HIV/AIDS, SARS, Ebola, Zika, dan pandemi influenza H1N1 (2009) juga menimbulkan dampak sosial-ekonomi besar.</p>
-<div class="timeline">
-<div class="timeline-item"><div class="timeline-year">2002–04</div><div class="timeline-dot"></div><div class="timeline-content"><h3>SARS</h3><p>Menunjukkan bagaimana patogen baru dapat menyebar lintas negara dan menuntut respons internasional.</p></div></div>
-<div class="timeline-item"><div class="timeline-year">2009</div><div class="timeline-dot"></div><div class="timeline-content"><h3>Influenza H1N1</h3><p>Pandemi influenza kembali memperlihatkan pentingnya surveilans dan kesiapan vaksin.</p></div></div>
-<div class="timeline-item"><div class="timeline-year">2013–16</div><div class="timeline-dot"></div><div class="timeline-content"><h3>Ebola</h3><p>Wabah besar di Afrika Barat menegaskan pentingnya deteksi dini, IPC, dan respons komunitas.</p></div></div>
-<div class="timeline-item"><div class="timeline-year">2019+</div><div class="timeline-dot"></div><div class="timeline-content"><h3>COVID-19</h3><p>Menjadi pengingat bahwa ancaman infeksi bersifat berkelanjutan dan memerlukan preparedness jangka panjang.</p></div></div>
-</div>
+  <button
+    class="menu-toggle"
+    aria-label="Buka menu"
+  >
+    ☰
+  </button>
 
-<h2>4. Epidemiologi Indonesia</h2>
-<div class="card-grid">
-<div class="info-card"><h3>Studi Riau</h3><p>Studi potong lintang mencakup 122.497 kasus (Maret 2020–Oktober 2021): 51,3% perempuan, median usia 35 tahun, 52,1% berusia 26–51 tahun, 3,3% meninggal, dan 87,3% menjalani isolasi mandiri (Sukirman et al., 2022).</p></div>
-<div class="info-card"><h3>Varian Omicron</h3><p>Omicron menjadi varian dominan di Indonesia pada akhir Desember 2021–awal Januari 2022; sumber yang dirujuk melaporkan proporsi kasus sekitar 97% dan lonjakan kasus-kematian yang sangat besar.</p></div>
-<div class="info-card"><h3>RSPI Sulianti Saroso</h3><p>Kohort retrospektif 1.970 pasien rawat inap (Juni 2020–September 2021) mengevaluasi karakteristik, tanda klinis, tata laksana, dan risiko kematian (Sitompul et al., 2024).</p></div>
-</div>
+  <nav class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="overview.html" class="active">Overview</a>
+    <a href="mapping.html">Disease Map</a>
+    <a href="prevention.html">Prevention</a>
+    <a href="telehealth.html">Telehealth</a>
+    <a href="communication.html">Communication</a>
+    <a href="reflection.html">Reflection</a>
+  </nav>
 
-<h2>5. Faktor risiko</h2>
-<div class="risk-list">
-<div><b>🩺 Biologis/klinis</b><span>Usia lanjut dan komorbid meningkatkan risiko keparahan dan kematian.</span></div>
-<div><b>🏙️ Lingkungan & sosial-ekonomi</b><span>Kepadatan tinggi, sanitasi buruk, kemiskinan, pekerjaan informal, kehilangan pendapatan, dan akses layanan terbatas dapat memperbesar dampak pandemi.</span></div>
-<div><b>🌏 Sosial-budaya</b><span>Menurut Sunrise Model Leininger, teknologi, agama/falsafah hidup, sosial-kekerabatan, nilai budaya, kebijakan/hukum, ekonomi, dan pendidikan memengaruhi respons kesehatan.</span></div>
-</div>
+  <button
+    class="theme-toggle"
+    id="themeToggle"
+    aria-label="Toggle day and night mode"
+  >
+    <span class="sun">☼</span>
+    <span class="moon">☾</span>
+    <span class="toggle-knob"></span>
+  </button>
 
-<h2>6. Dampak kesehatan</h2>
-<div class="card-grid">
-<div class="info-card"><span class="icon">🫁</span><h3>Fisik</h3><p>Kesakitan-kematian meningkat, terutama pada lansia dan kelompok komorbid; fasilitas kesehatan dapat mengalami beban berlebih.</p></div>
-<div class="info-card"><span class="icon">🧠</span><h3>Mental</h3><p>Kecemasan, depresi, kesepian, stres ekonomi, dan trauma tenaga kesehatan dapat meningkat selama pandemi (Nasrullah, 2021).</p></div>
-<div class="info-card"><span class="icon">💼</span><h3>Sosial-ekonomi</h3><p>Pembatasan mobilitas dapat menekan pelayanan publik dan aktivitas ekonomi serta memperlebar kesenjangan sosial-ekonomi.</p></div>
-</div>
+</header>
 
-<div class="source-note"><b>Catatan akademik:</b> angka epidemiologi merupakan data historis sesuai referensi tugas. Untuk angka terkini, gunakan dashboard resmi WHO/Kemenkes.</div>
-</div></section></main>
-<footer class="footer"><div class="container footer-grid">
-<div><a class="brand" href="../index.html"><span class="brand-mark">✚</span><span>Pandemic<span>Prep</span></span></a><p>Interactive Digital Website — Global Disease & Communication Project.</p></div>
-<div><strong>Kelompok 2</strong><p>Pandemic Preparedness<br>COVID-19 & Emerging Diseases</p></div>
-<div><strong>Official sources</strong><p><a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> · <a href="https://www.kemkes.go.id/" target="_blank" rel="noopener">Kemenkes RI</a></p></div>
-</div><div class="container footer-bottom">© 2026 Kelompok 2 · Academic/educational purposes.</div></footer>
-<script src="../script.js"></script></body></html>
+
+<!-- =========================================================
+     HERO OVERVIEW
+========================================================= -->
+
+<header class="overview-hero">
+
+    <div class="overview-hero-inner">
+
+        <div class="overview-hero-copy">
+
+            <div class="overview-eyebrow">
+                01 / OVERVIEW
+            </div>
+
+            <h1>
+                Understanding
+                <span>What Emerges.</span>
+            </h1>
+
+            <p>
+                Memahami COVID-19 dan emerging diseases sebagai
+                ancaman kesehatan yang terus berkembang — dari
+                kemunculan penyakit hingga faktor yang memengaruhi
+                penyebaran dan dampaknya.
+            </p>
+
+            <div class="overview-hero-buttons">
+
+                <a href="#definition" class="overview-btn overview-btn-red">
+                    Mulai Explore ↓
+                </a>
+
+                <a href="#global" class="overview-btn overview-btn-light">
+                    Global Snapshot
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Decorative visual -->
+
+        <div class="overview-hero-art">
+
+            <div class="art-circle art-circle-1"></div>
+            <div class="art-circle art-circle-2"></div>
+
+            <div class="art-card">
+
+                <div class="art-card-top">
+                    <span>EPIDEMIOLOGY</span>
+                    <span>2026</span>
+                </div>
+
+                <div class="art-number">
+                    EID
+                </div>
+
+                <div class="art-description">
+                    Emerging<br>
+                    Infectious<br>
+                    Diseases
+                </div>
+
+                <div class="art-line"></div>
+
+                <div class="art-small">
+                    NEW · RE-EMERGING · RESISTANT
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     INTRO / QUICK FACT
+========================================================= -->
+
+<section class="overview-intro">
+
+    <div class="overview-container">
+
+        <div class="section-label">
+            THE BIG PICTURE
+        </div>
+
+        <div class="intro-grid">
+
+            <div>
+                <h2>
+                    Penyakit infeksi
+                    <span>tidak berhenti.</span>
+                </h2>
+            </div>
+
+            <div>
+                <p>
+                    Penyakit infeksi telah lama menjadi penyebab utama
+                    kesakitan dan kematian di dunia. Walaupun beberapa
+                    penyakit lama berhasil dikendalikan, penyakit baru
+                    tetap dapat muncul dan penyakit lama dapat kembali
+                    muncul.
+                </p>
+
+                <p>
+                    Karena itu, ancaman emerging dan re-emerging disease
+                    bersifat berkelanjutan dan membutuhkan kesiapsiagaan
+                    yang terus diperbarui.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DEFINITION
+========================================================= -->
+
+<section class="overview-section" id="definition">
+
+    <div class="overview-container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                01 — DEFINITION
+            </div>
+
+            <h2>
+                What is an
+                <span>Emerging Disease?</span>
+            </h2>
+
+            <p>
+                COVID-19 termasuk kategori
+                <em>emerging infectious disease</em> (EID), yaitu
+                penyakit yang baru muncul atau muncul kembali
+                pada populasi manusia.
+            </p>
+
+        </div>
+
+
+        <!-- Definition highlight -->
+
+        <div class="definition-highlight">
+
+            <div class="definition-icon">
+                EID
+            </div>
+
+            <div>
+                <h3>
+                    Emerging Infectious Disease
+                </h3>
+
+                <p>
+                    EID dapat berupa penyakit yang benar-benar baru,
+                    penyakit lama yang muncul di wilayah atau populasi
+                    baru, penyakit yang muncul kembali, penyakit yang
+                    mengalami peningkatan keparahan, maupun penyakit
+                    yang menjadi sulit dikendalikan atau resisten
+                    terhadap pengobatan.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Five classifications -->
+
+        <div class="classification-grid">
+
+            <article class="classification-card">
+                <span>01</span>
+
+                <div class="classification-number">
+                    NEW
+                </div>
+
+                <h3>
+                    Truly New
+                </h3>
+
+                <p>
+                    Penyakit yang benar-benar baru muncul pada
+                    populasi manusia.
+                </p>
+            </article>
+
+
+            <article class="classification-card">
+                <span>02</span>
+
+                <div class="classification-number">
+                    NEW AREA
+                </div>
+
+                <h3>
+                    New Population
+                </h3>
+
+                <p>
+                    Penyakit lama yang muncul pada area atau
+                    populasi baru.
+                </p>
+            </article>
+
+
+            <article class="classification-card">
+                <span>03</span>
+
+                <div class="classification-number">
+                    RETURN
+                </div>
+
+                <h3>
+                    Re-emerging
+                </h3>
+
+                <p>
+                    Penyakit lama yang kembali muncul atau meningkat
+                    setelah sebelumnya terkendali.
+                </p>
+            </article>
+
+
+            <article class="classification-card">
+                <span>04</span>
+
+                <div class="classification-number">
+                    SEVERE
+                </div>
+
+                <h3>
+                    Increased Severity
+                </h3>
+
+                <p>
+                    Penyakit yang sebelumnya ringan tetapi mengalami
+                    peningkatan keparahan.
+                </p>
+            </article>
+
+
+            <article class="classification-card">
+                <span>05</span>
+
+                <div class="classification-number">
+                    RESISTANT
+                </div>
+
+                <h3>
+                    Uncontrolled
+                </h3>
+
+                <p>
+                    Penyakit yang menjadi sulit dikendalikan atau
+                    mengalami resistensi terhadap pengobatan.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     COVID VS EMERGING DISEASE
+========================================================= -->
+
+<section class="overview-section overview-compare-section">
+
+    <div class="overview-container">
+
+        <div class="section-heading centered">
+
+            <div class="section-label">
+                02 — DRIVERS
+            </div>
+
+            <h2>
+                Why do diseases
+                <span>emerge?</span>
+            </h2>
+
+            <p>
+                Faktor pendorong COVID-19 memiliki beberapa kesamaan
+                dengan emerging diseases lainnya, tetapi terdapat
+                karakteristik yang perlu diperhatikan secara khusus.
+            </p>
+
+        </div>
+
+
+        <div class="compare-grid">
+
+            <!-- COVID -->
+
+            <div class="compare-card covid-card">
+
+                <div class="compare-card-header">
+
+                    <span class="compare-tag">
+                        COVID-19
+                    </span>
+
+                    <span class="compare-symbol">
+                        +
+                    </span>
+
+                </div>
+
+                <h3>
+                    COVID-19
+                </h3>
+
+                <p class="compare-intro">
+                    Faktor yang mendukung kemunculan dan penyebaran
+                    SARS-CoV-2.
+                </p>
+
+
+                <ul class="driver-list">
+
+                    <li>
+                        <strong>01</strong>
+                        <span>
+                            Mutasi SARS-CoV-2 membentuk varian dan
+                            subvarian baru.
+                        </span>
+                    </li>
+
+                    <li>
+                        <strong>02</strong>
+                        <span>
+                            Diduga berasal dari <em>spillover</em>
+                            hewan ke manusia.
+                        </span>
+                    </li>
+
+                    <li>
+                        <strong>03</strong>
+                        <span>
+                            Lansia, penderita komorbid, dan individu
+                            dengan gangguan imun memiliki kerentanan
+                            lebih tinggi.
+                        </span>
+                    </li>
+
+                    <li>
+                        <strong>04</strong>
+                        <span>
+                            Mobilitas internasional dan event besar
+                            dapat mempercepat penyebaran.
+                        </span>
+                    </li>
+
+                    <li>
+                        <strong>05</strong>
+                        <span>
+                            Kepadatan penduduk dan sanitasi buruk dapat
+                            mempercepat transmisi.
+                        </span>
+                    </li>
+
+                </ul>
+
+                <div class="compare-footer">
+                    Strategic Plan for Coronavirus Disease
+                    Threat Management 2025–2030
+                </div>
+
+            </div>
+
+
+            <!-- Emerging -->
+
+            <div class="compare-card emerging-card">
+
+                <div class="compare-card-header">
+
+                    <span class="compare-tag">
+                        EMERGING DISEASES
+                    </span>
+
+                    <span class="compare-symbol">
+                        ×
+                    </span>
+
+                </div>
+
+                <h3>
+                    Emerging Diseases
+                </h3>
+
+                <p class="compare-intro">
+                    Faktor yang dapat mendorong muncul dan menyebarnya
+                    berbagai penyakit infeksi baru.
+                </p>
+
+
+                <ul class="driver-list">
+
+                    <li>
+                        <strong>01</strong>
+                        <span>
+                            Agen mikroba dapat beradaptasi dan memperoleh
+                            karakteristik baru.
+                        </span>
+                    </li>
+
+                    <li>
+                        <strong>02</strong>
+                        <span>
+                            Zoonosis menjadi salah satu sumber penting
+                            infeksi baru pada manusia.
+                        </span>
+                    </li>
+
+                    <li>
+                        <strong>03</strong>
+                        <span>
+                            Perubahan iklim dan ekosistem meningkatkan
+                            kontak manusia dengan hewan.
+                        </span>
+                    </li>
+
+                    <li>
+                        <strong>04</strong>
+                        <span>
+                            Urbanisasi, mobilitas manusia, dan perubahan
+                            lingkungan dapat memperluas penyebaran.
+                        </span>
+                    </li>
+
+                    <li>
+                        <strong>05</strong>
+                        <span>
+                            Resistensi obat dan penurunan cakupan vaksinasi
+                            dapat meningkatkan risiko wabah.
+                        </span>
+                    </li>
+
+                </ul>
+
+                <div class="compare-footer">
+                    One Health · Surveillance · AI · Global Collaboration
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GLOBAL SNAPSHOT
+========================================================= -->
+
+<section class="overview-section global-section" id="global">
+
+    <div class="overview-container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                03 — GLOBAL EPIDEMIOLOGY
+            </div>
+
+            <h2>
+                The global
+                <span>snapshot.</span>
+            </h2>
+
+            <p>
+                Data berikut menggambarkan situasi global berdasarkan
+                periode pelaporan yang tercantum dalam materi.
+            </p>
+
+        </div>
+
+
+        <!-- Statistics -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    COVID-19 CASES
+                </span>
+
+                <strong>
+                    779M+
+                </strong>
+
+                <p>
+                    Kasus terkonfirmasi global sejak 2020
+                    hingga 28 Juni 2026.
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    REPORTED DEATHS
+                </span>
+
+                <strong>
+                    7M+
+                </strong>
+
+                <p>
+                    Kematian COVID-19 yang telah dilaporkan
+                    secara global kepada WHO.
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    GLOBAL RISK
+                </span>
+
+                <strong class="stat-word">
+                    MODERATE
+                </strong>
+
+                <p>
+                    Tingkat risiko kesehatan publik global
+                    per 30 Juli 2026.
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    COVID-19 ACTIVITY
+                </span>
+
+                <strong>
+                    3.4%
+                </strong>
+
+                <p>
+                    Positif dari 54.029 sampel di 69 negara
+                    pada 20–26 Juli 2026.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Data detail -->
+
+        <div class="data-panel">
+
+            <div class="data-panel-title">
+                COVID-19 GLOBAL DATA
+            </div>
+
+            <div class="data-row">
+
+                <div>
+                    <span>
+                        29 Juni – 26 Juli 2026
+                    </span>
+
+                    <strong>
+                        1.439
+                    </strong>
+
+                    <small>
+                        perawatan rumah sakit baru
+                        dari 29 negara
+                    </small>
+                </div>
+
+
+                <div>
+                    <span>
+                        ICU Admissions
+                    </span>
+
+                    <strong>
+                        74
+                    </strong>
+
+                    <small>
+                        admisi ICU dari 23 negara
+                    </small>
+                </div>
+
+
+                <div>
+                    <span>
+                        H5N1
+                    </span>
+
+                    <strong>
+                        32 / 12
+                    </strong>
+
+                    <small>
+                        kasus / kematian pada periode
+                        2025–2026 dari 8 negara
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INDONESIA
+========================================================= -->
+
+<section class="overview-section indonesia-section">
+
+    <div class="overview-container">
+
+        <div class="section-heading centered">
+
+            <div class="section-label">
+                04 — INDONESIA
+            </div>
+
+            <h2>
+                The situation
+                <span>in Indonesia.</span>
+            </h2>
+
+            <p>
+                Kondisi Indonesia menunjukkan situasi yang jauh lebih
+                ringan dibandingkan fase awal pandemi, namun surveilans
+                tetap diperlukan untuk mendeteksi perubahan.
+            </p>
+
+        </div>
+
+
+        <div class="indonesia-grid">
+
+            <!-- Indonesia visual -->
+
+            <div class="indo-visual">
+
+                <div class="indo-circle">
+
+                    <span>
+                        ID
+                    </span>
+
+                    <strong>
+                        2026
+                    </strong>
+
+                </div>
+
+                <div class="indo-note note-1">
+                    690 CASES
+                </div>
+
+                <div class="indo-note note-2">
+                    0 DEATHS
+                </div>
+
+                <div class="indo-note note-3">
+                    SURVEILLANCE
+                </div>
+
+            </div>
+
+
+            <!-- Indonesia information -->
+
+            <div class="indo-content">
+
+                <div class="indo-item">
+
+                    <span class="indo-number">
+                        01
+                    </span>
+
+                    <div>
+                        <h3>
+                            Jumlah kasus
+                        </h3>
+
+                        <p>
+                            Sepanjang 2025 hingga minggu epidemiologi
+                            ke-3 tahun 2026, Indonesia mencatat
+                            <strong>690 kasus</strong> dengan
+                            <strong>nol kematian</strong>.
+                        </p>
+
+                        <p>
+                            Pada minggu epidemiologi ke-3 tahun 2026,
+                            terdapat 10 kasus terkonfirmasi di
+                            8 kabupaten/kota.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="indo-item">
+
+                    <span class="indo-number">
+                        02
+                    </span>
+
+                    <div>
+                        <h3>
+                            Varian dominan
+                        </h3>
+
+                        <p>
+                            Varian XFG mendominasi berdasarkan data yang
+                            tercantum dalam materi, disusul turunan JN.1
+                            seperti LF.7.9, MB.1.1, dan KP.2.18.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="indo-item">
+
+                    <span class="indo-number">
+                        03
+                    </span>
+
+                    <div>
+                        <h3>
+                            Emerging diseases
+                        </h3>
+
+                        <p>
+                            Indonesia belum melaporkan kasus H5N1 pada
+                            manusia sejak 2018. MERS, virus Hanta, Nipah,
+                            dan Ebola tetap berada dalam pengawasan.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="indo-item">
+
+                    <span class="indo-number">
+                        04
+                    </span>
+
+                    <div>
+                        <h3>
+                            Kebijakan respons
+                        </h3>
+
+                        <p>
+                            Kemenkes menerbitkan surat edaran kewaspadaan
+                            pada 23 Mei 2025 setelah terjadi kenaikan kasus
+                            di beberapa negara kawasan.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RISK FACTORS
+========================================================= -->
+
+<section class="overview-section risk-section">
+
+    <div class="overview-container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                05 — RISK FACTORS
+            </div>
+
+            <h2>
+                Risk is
+                <span>multidimensional.</span>
+            </h2>
+
+            <p>
+                Risiko penyakit tidak hanya dipengaruhi oleh agen infeksi,
+                tetapi juga oleh kondisi biologis, lingkungan, sosial,
+                perilaku, dan budaya.
+            </p>
+
+        </div>
+
+
+        <div class="risk-grid">
+
+            <article class="risk-card">
+
+                <div class="risk-icon">
+                    BIO
+                </div>
+
+                <h3>
+                    Biologi / Klinis
+                </h3>
+
+                <div class="risk-columns">
+
+                    <div>
+                        <span>COVID-19</span>
+
+                        <p>
+                            Usia lanjut dan penyakit penyerta
+                            meningkatkan risiko keparahan dan kematian.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>EMERGING</span>
+
+                        <p>
+                            Adaptasi genetik agen mikroba dan
+                            kerentanan biologis pejamu.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="risk-card">
+
+                <div class="risk-icon">
+                    ENV
+                </div>
+
+                <h3>
+                    Lingkungan
+                </h3>
+
+                <div class="risk-columns">
+
+                    <div>
+                        <span>COVID-19</span>
+
+                        <p>
+                            Mobilitas lintas negara mempercepat
+                            penyebaran antarnegara.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>EMERGING</span>
+
+                        <p>
+                            Perubahan iklim dan ekosistem membuka
+                            jalur kontak manusia-hewan.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="risk-card">
+
+                <div class="risk-icon">
+                    SOC
+                </div>
+
+                <h3>
+                    Sosial / Ekonomi
+                </h3>
+
+                <div class="risk-columns">
+
+                    <div>
+                        <span>COVID-19</span>
+
+                        <p>
+                            Kemiskinan, sanitasi buruk, dan kepadatan
+                            penduduk dapat mempercepat penyebaran.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>EMERGING</span>
+
+                        <p>
+                            Kemiskinan dan disrupsi sistem kesehatan
+                            memperbesar risiko penyebaran EID.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="risk-card">
+
+                <div class="risk-icon">
+                    BEH
+                </div>
+
+                <h3>
+                    Perilaku
+                </h3>
+
+                <div class="risk-columns">
+
+                    <div>
+                        <span>COVID-19</span>
+
+                        <p>
+                            Mobilitas dan interaksi sosial yang tinggi
+                            dapat mempercepat transmisi.
+                        </p>
+                    </div>
+
+                    <div>
+                        <span>EMERGING</span>
+
+                        <p>
+                            Mobilitas manusia dan penurunan vaksinasi
+                            dapat meningkatkan risiko wabah.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="risk-card risk-card-wide">
+
+                <div class="risk-icon">
+                    CULTURE
+                </div>
+
+                <h3>
+                    Sosial-Budaya
+                </h3>
+
+                <div class="culture-content">
+
+                    <p>
+                        Berdasarkan <strong>Sunrise Model Leininger</strong>,
+                        respons masyarakat terhadap pencegahan penyakit
+                        dapat dipengaruhi oleh tujuh dimensi:
+                    </p>
+
+                    <div class="culture-tags">
+
+                        <span>Teknologi</span>
+                        <span>Agama / Falsafah</span>
+                        <span>Sosial-Kekerabatan</span>
+                        <span>Nilai Budaya</span>
+                        <span>Kebijakan / Hukum</span>
+                        <span>Ekonomi</span>
+                        <span>Pendidikan</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     IMPACT
+========================================================= -->
+
+<section class="overview-section impact-section">
+
+    <div class="overview-container">
+
+        <div class="section-heading centered">
+
+            <div class="section-label">
+                06 — HEALTH IMPACT
+            </div>
+
+            <h2>
+                Beyond the
+                <span>infection.</span>
+            </h2>
+
+            <p>
+                Dampak penyakit infeksi dapat meluas dari kondisi fisik
+                hingga kesehatan mental dan kehidupan sosial-ekonomi.
+            </p>
+
+        </div>
+
+
+        <div class="impact-grid">
+
+            <article class="impact-card">
+
+                <span class="impact-number">
+                    01
+                </span>
+
+                <div class="impact-symbol">
+                    +
+                </div>
+
+                <h3>
+                    Fisik
+                </h3>
+
+                <p>
+                    Peningkatan angka kesakitan dan kematian, terutama
+                    pada lansia dan kelompok dengan komorbid, serta
+                    peningkatan beban fasilitas kesehatan seperti
+                    tempat tidur dan ICU.
+                </p>
+
+            </article>
+
+
+            <article class="impact-card impact-red">
+
+                <span class="impact-number">
+                    02
+                </span>
+
+                <div class="impact-symbol">
+                    ∿
+                </div>
+
+                <h3>
+                    Mental
+                </h3>
+
+                <p>
+                    Pandemi dapat berkaitan dengan kecemasan, depresi,
+                    kesepian, isolasi sosial, tekanan ekonomi, dan
+                    trauma pada tenaga kesehatan.
+                </p>
+
+            </article>
+
+
+            <article class="impact-card">
+
+                <span class="impact-number">
+                    03
+                </span>
+
+                <div class="impact-symbol">
+                    ↗
+                </div>
+
+                <h3>
+                    Sosial-Ekonomi
+                </h3>
+
+                <p>
+                    Pembatasan sosial dan mobilitas dapat memengaruhi
+                    pelayanan publik serta aktivitas ekonomi dan dapat
+                    memperlebar kesenjangan sosial-ekonomi.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PREPAREDNESS
+========================================================= -->
+
+<section class="preparedness-section">
+
+    <div class="overview-container">
+
+        <div class="preparedness-box">
+
+            <div class="preparedness-small">
+                PANDEMIC PREPAREDNESS
+            </div>
+
+            <h2>
+                Understand the threat.
+                <span>Prepare the response.</span>
+            </h2>
+
+            <p>
+                Emerging diseases tidak dapat dipahami hanya dari satu
+                sudut pandang. Surveilans, sistem kesehatan, pendekatan
+                One Health, teknologi, komunikasi risiko, dan kolaborasi
+                diperlukan untuk mendeteksi serta merespons ancaman.
+            </p>
+
+            <div class="preparedness-links">
+
+                <a href="mapping.html">
+                    Explore Disease Map →
+                </a>
+
+                <a href="prevention.html">
+                    Explore Prevention →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SOURCES
+========================================================= -->
+
+<section class="overview-sources">
+
+    <div class="overview-container">
+
+        <div class="source-title">
+            SOURCE NOTES
+        </div>
+
+        <p>
+            Materi Overview menggunakan sumber yang tercantum dalam
+            bahan kelompok, termasuk NCBI (2024), Wang et al. (2023),
+            WHO, Kemenkes RI, Nasrullah (2021), dan UNAIR (2023).
+        </p>
+
+        <p class="source-note">
+            Data epidemiologi ditampilkan sesuai periode waktu yang
+            tercantum pada materi dan tidak dimaksudkan sebagai
+            diagnosis atau penilaian klinis individual.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="overview-footer">
+
+    <div class="overview-container">
+
+        <div>
+            <strong>
+                Pandemic<span>Prep</span>
+            </strong>
+
+            <p>
+                Global Disease & Communication Project
+                · Kelompok 2
+            </p>
+        </div>
+
+        <div class="container footer-bottom">
+      © 2026 Kelompok 2 ·
+      For academic/educational purposes.
+      <p>
+      Aghnia Nurul 'Afifah, Revita Gultom, Zaenab Shalsabil Az-zahra,
+      Zhillan Insyiraah, Milca Alysseane</p>
+    </div> 
+    
+        <div>
+           <a href="../index.html">
+    Back to Home ↑
+</a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT KHUSUS OVERVIEW
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ---------------------------------------------
+       MOBILE MENU
+    --------------------------------------------- */
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    if (menuToggle && navbar) {
+
+        menuToggle.addEventListener("click", function () {
+            navbar.classList.toggle("menu-open");
+        });
+
+    }
+
+
+    /* ---------------------------------------------
+       DARK MODE
+    --------------------------------------------- */
+
+    const themeToggle = document.querySelector("#themeToggle");
+
+    const savedTheme =
+        localStorage.getItem("pandemic-theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+    }
+
+    if (themeToggle) {
+
+        themeToggle.textContent =
+            document.body.classList.contains("dark")
+                ? "☀"
+                : "☾";
+
+        themeToggle.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark");
+
+            const dark =
+                document.body.classList.contains("dark");
+
+            localStorage.setItem(
+                "pandemic-theme",
+                dark ? "dark" : "light"
+            );
+
+            themeToggle.textContent =
+                dark ? "☀" : "☾";
+
+        });
+
+    }
+
+
+    /* ---------------------------------------------
+       SCROLL PROGRESS
+    --------------------------------------------- */
+
+    const progress =
+        document.querySelector("#overviewProgress");
+
+    window.addEventListener("scroll", function () {
+
+        if (!progress) return;
+
+        const documentHeight =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+
+        const scrollTop =
+            document.documentElement.scrollTop;
+
+        const percentage =
+            documentHeight > 0
+                ? (scrollTop / documentHeight) * 100
+                : 0;
+
+        progress.style.width =
+            percentage + "%";
+
+    });
+
+
+    /* ---------------------------------------------
+       REVEAL ANIMATION
+    --------------------------------------------- */
+
+    const revealItems =
+        document.querySelectorAll(
+            ".classification-card, .compare-card, .stat-card, .risk-card, .impact-card, .indo-item"
+        );
+
+    const observer =
+        new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("overview-visible");
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+    revealItems.forEach(function (item) {
+        observer.observe(item);
+    });
+
+
+    /* ---------------------------------------------
+       ACTIVE NAV ON SCROLL
+    --------------------------------------------- */
+
+    const navLinks =
+        document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(function (link) {
+
+        if (
+            link.getAttribute("href") ===
+            "overview.html"
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
