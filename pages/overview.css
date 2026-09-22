@@ -2874,3 +2874,42 @@ body.dark.overview-page .culture-tags span {
     }
 
 }
+body.dark.overview-page .culture-tags span {
+
+    background:
+        #211a1b;
+
+    border-color:
+        var(--ov-line);
+}
+
+
+/* =========================================================
+   DARK MODE — DATA PANEL
+========================================================= */
+
+body.dark.overview-page .data-panel {
+    background: #2a2022;
+    color: #f7eeee;
+    border-color: #403335;
+}
+
+body.dark.overview-page .data-panel-title {
+    color: #e8aeb3;
+}
+
+body.dark.overview-page .data-row > div {
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+body.dark.overview-page .data-row span {
+    color: #c7babb;
+}
+
+body.dark.overview-page .data-row strong {
+    color: #ffffff;
+}
+
+body.dark.overview-page .data-row small {
+    color: #b9acad;
+}
