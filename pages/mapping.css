@@ -1927,3 +1927,18 @@ body.dark.mapping-page .mapping-world-image {
 .mapping-page .video-caption a:hover {
     text-decoration: underline;
 }
+
+.mapping-video-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.mapping-video-wrapper video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
