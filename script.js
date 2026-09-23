@@ -711,6 +711,22 @@ if (visual) {
             "kami akan membantu anda":
               "Wir werden Ihnen helfen."
 
+          },
+
+           jp: {
+
+            "saya demam dan batuk":
+              "熱があって咳が出ます。",
+
+            "apakah anda sesak napas":
+              "息切れしていますか？",
+
+            "tolong tunggu di sini":
+              "ここで待っていてください。",
+
+            "kami akan membantu anda":
+              "私たちがお手伝いします."
+
           }
 
         };
